@@ -31,6 +31,7 @@ public class MainApp extends Application {
      */
     public static void main(String[] args) {
 //
+
         try {
             startDatabase();
         } catch (SQLException ex) {
