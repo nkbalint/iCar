@@ -21,6 +21,7 @@ public class MainApp extends Application {
         stage.setTitle("Bejelentkezés");
         stage.setScene(scene);
         stage.show();
+
     }
 
     /**
