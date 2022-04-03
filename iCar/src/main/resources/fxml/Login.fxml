@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER_RIGHT" fillWidth="false" prefHeight="439.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.controller.LoginController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="439.0" fitWidth="780.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Képek/auto2.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane cache="true" focusTraversable="true" layoutX="346.0" layoutY="14.0" opacity="0.7" prefHeight="410.0" prefWidth="420.0" style="-fx-background-color: white; -fx-background-radius: 40;" />
+            <AnchorPane cache="true" focusTraversable="true" layoutX="346.0" layoutY="15.0" prefHeight="410.0" prefWidth="420.0" style="-fx-background-radius: 40;">
+               <children>
+                  <Label alignment="CENTER" layoutY="31.0" prefHeight="50.0" prefWidth="420.0" text="Bejelentkezés">
+                     <font>
+                        <Font name="Century" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="23.0" layoutY="96.0" text="Email:">
+                     <font>
+                        <Font name="Century" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="23.0" layoutY="205.0" text="Jelszó:">
+                     <font>
+                        <Font name="Century" size="25.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="emailLabel" alignment="CENTER" layoutX="23.0" layoutY="151.0" prefHeight="30.0" prefWidth="191.0" promptText="Kérlek add meg az email címed!" style="-fx-background-radius: 30;">
+                     <font>
+                        <Font name="Century" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="loginButton" layoutX="47.0" layoutY="322.0" mnemonicParsing="false" onAction="#clickedLoginButton" prefHeight="22.0" prefWidth="142.0" style="-fx-background-radius: 30;" text="Belépés">
+                     <font>
+                        <Font name="Century" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="registrationButton" layoutX="232.0" layoutY="322.0" mnemonicParsing="false" onAction="#clickedRegistrationButton" prefHeight="22.0" prefWidth="142.0" style="-fx-background-radius: 30;" text="Regisztráció">
+                     <font>
+                        <Font name="Century" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" />
+                     </effect>
+                  </Button>
+                  <ImageView fitHeight="93.0" fitWidth="150.0" layoutX="245.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Képek/iCar_logó.png" />
+                     </image>
+                  </ImageView>
+                  <PasswordField fx:id="passwordLabel" alignment="CENTER" layoutX="23.0" layoutY="260.0" prefHeight="30.0" prefWidth="191.0" promptText="Kérlek add meg a jelszavad!" style="-fx-background-radius: 30;">
+                     <font>
+                        <Font name="Century" size="12.0" />
+                     </font>
+                  </PasswordField>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
