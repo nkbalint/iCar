@@ -67,7 +67,6 @@ public class RegisterController {
     void clickedRegistButton(ActionEvent event) {
 
         boolean cont = true;
-
         noValidName.setVisible(false);
         noValidEmail.setVisible(false);
         noValidAddress.setVisible(false);
@@ -75,7 +74,6 @@ public class RegisterController {
         noValidPass.setVisible(false);
         noMatchingPass.setVisible(false);
         //eloszor nincs hibauzenet
-
         if(nameLabel.getText().isEmpty()){
             noValidName.setVisible(true);
             cont = false;
