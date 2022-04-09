@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -31,6 +32,15 @@ public class LoginController {
 
     @FXML
     void clickedLoginButton(ActionEvent event) {
+
+        if(emailLabel.getText().isEmpty() || passwordLabel.getText().isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.ERROR,
+                    "Az e-mail vagy jelszó mező üres!");
+            alert.showAndWait();
+        }
+        //
+        //keresés az adatbázisban
+        //
 
     }
 
