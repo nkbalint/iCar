@@ -44,19 +44,19 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER_RIGHT" fillWidth="false" prefHeight="439.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.controller.LoginController">
+<VBox alignment="CENTER_RIGHT" fillWidth="false" maxHeight="585.0" maxWidth="869.0" minHeight="67.0" prefHeight="534.0" prefWidth="791.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.controller.LoginController">
    <children>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+      <AnchorPane prefHeight="574.0" prefWidth="882.0">
          <children>
-            <ImageView fitHeight="439.0" fitWidth="780.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="574.0" fitWidth="800.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Képek/auto2.jpg" />
+                  <Image url="@../Képek/auto1.jpg" />
                </image>
             </ImageView>
-            <AnchorPane cache="true" focusTraversable="true" layoutX="346.0" layoutY="14.0" opacity="0.7" prefHeight="410.0" prefWidth="420.0" style="-fx-background-color: white; -fx-background-radius: 40;" />
-            <AnchorPane cache="true" focusTraversable="true" layoutX="346.0" layoutY="15.0" prefHeight="410.0" prefWidth="420.0" style="-fx-background-radius: 40;">
+            <AnchorPane cache="true" focusTraversable="true" layoutX="124.0" layoutY="64.0" opacity="0.7" prefHeight="410.0" prefWidth="550.0" style="-fx-background-color: white; -fx-background-radius: 40;" />
+            <AnchorPane cache="true" focusTraversable="true" layoutX="124.0" layoutY="65.0" prefHeight="410.0" prefWidth="550.0" style="-fx-background-radius: 40;">
                <children>
-                  <Label alignment="CENTER" layoutY="31.0" prefHeight="50.0" prefWidth="420.0" text="Bejelentkezés">
+                  <Label alignment="CENTER" layoutY="31.0" prefHeight="50.0" prefWidth="550.0" text="Bejelentkezés">
                      <font>
                         <Font name="Century" size="35.0" />
                      </font>
@@ -71,12 +71,12 @@
                         <Font name="Century" size="25.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="emailLabel" alignment="CENTER" layoutX="23.0" layoutY="151.0" prefHeight="30.0" prefWidth="191.0" promptText="Kérlek add meg az email címed!" style="-fx-background-radius: 30;">
+                  <TextField fx:id="emailLabel" alignment="CENTER" layoutX="23.0" layoutY="148.0" prefHeight="36.0" prefWidth="228.0" promptText="Kérlek add meg az email címed!" style="-fx-background-radius: 30;">
                      <font>
-                        <Font name="Century" size="12.0" />
+                        <Font name="Century" size="14.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="loginButton" layoutX="47.0" layoutY="322.0" mnemonicParsing="false" onAction="#clickedLoginButton" prefHeight="22.0" prefWidth="142.0" style="-fx-background-radius: 30;" text="Belépés">
+                  <Button fx:id="loginButton" layoutX="54.0" layoutY="319.0" mnemonicParsing="false" onAction="#clickedLoginButton" prefHeight="45.0" prefWidth="166.0" style="-fx-background-radius: 30;" text="Belépés">
                      <font>
                         <Font name="Century" size="20.0" />
                      </font>
@@ -87,7 +87,7 @@
                         <DropShadow />
                      </effect>
                   </Button>
-                  <Button fx:id="registrationButton" layoutX="232.0" layoutY="322.0" mnemonicParsing="false" onAction="#clickedRegistrationButton" prefHeight="22.0" prefWidth="142.0" style="-fx-background-radius: 30;" text="Regisztráció">
+                  <Button fx:id="registrationButton" layoutX="325.0" layoutY="319.0" mnemonicParsing="false" onAction="#clickedRegistrationButton" prefHeight="45.0" prefWidth="166.0" style="-fx-background-radius: 30;" text="Regisztráció">
                      <font>
                         <Font name="Century" size="20.0" />
                      </font>
@@ -98,14 +98,14 @@
                         <DropShadow blurType="GAUSSIAN" />
                      </effect>
                   </Button>
-                  <ImageView fitHeight="93.0" fitWidth="150.0" layoutX="245.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="110.0" fitWidth="172.0" layoutX="334.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../Képek/iCar_logó.png" />
                      </image>
                   </ImageView>
-                  <PasswordField fx:id="passwordLabel" alignment="CENTER" layoutX="23.0" layoutY="260.0" prefHeight="30.0" prefWidth="191.0" promptText="Kérlek add meg a jelszavad!" style="-fx-background-radius: 30;">
+                  <PasswordField fx:id="passwordLabel" alignment="CENTER" layoutX="23.0" layoutY="257.0" prefHeight="36.0" prefWidth="228.0" promptText="Kérlek add meg a jelszavad!" style="-fx-background-radius: 30;">
                      <font>
-                        <Font name="Century" size="12.0" />
+                        <Font name="Century" size="14.0" />
                      </font>
                   </PasswordField>
                </children>
