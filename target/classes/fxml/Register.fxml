@@ -32,6 +32,7 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -43,7 +44,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.controller.RegisterController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.controller.RegisterController">
    <children>
       <AnchorPane fx:id="handleScreen" prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -147,8 +148,47 @@
                         <DropShadow blurType="GAUSSIAN" />
                      </effect>
                   </Button>
+                  <Label fx:id="noMatchingPass" layoutX="138.0" layoutY="341.0" prefHeight="18.0" prefWidth="213.0" text="Nem egyezik meg a beírt jelszó!" textFill="RED" visible="false">
+                     <font>
+                        <Font name="Century" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="noValidEmail" layoutX="145.0" layoutY="123.0" prefHeight="18.0" prefWidth="188.0" text="Nem megfelelő e-mail cím!" textFill="RED" visible="false">
+                     <font>
+                        <Font name="Century" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="noValidPhone" layoutX="140.0" layoutY="231.0" prefHeight="18.0" prefWidth="213.0" text="A telefon mező nem lehet üres!" textFill="RED" visible="false">
+                     <font>
+                        <Font name="Century" size="14.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <Label fx:id="noValidPass" layoutX="141.0" layoutY="282.0" prefHeight="18.0" prefWidth="219.0" text="A jelszó nem megfelelő!" textFill="RED" visible="false">
+                     <font>
+                        <Font name="Century" size="14.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <Label fx:id="noValidName" layoutX="147.0" layoutY="68.0" prefHeight="17.0" prefWidth="188.0" text="A  név mező nem lehet üres!" textFill="RED" visible="false">
+                     <font>
+                        <Font name="Century" size="14.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
+            <Label fx:id="noValidAddress" layoutX="199.0" layoutY="289.0" prefHeight="18.0" prefWidth="203.0" text="A  lakcím mező nem lehet üres!" textFill="RED" visible="false">
+               <font>
+                  <Font name="Century" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
          </children>
       </AnchorPane>
    </children>
