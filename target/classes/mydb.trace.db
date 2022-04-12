@@ -65,3 +65,39 @@ select * from FELHASZNÁLÓK.SA [90079-199]
 2022-03-30 18:13:02 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM INFORMATION_SCHEMA.CATALOGS INFORMATION_SCHEMA.[*]USERS"; SQL statement:
 SELECT * FROM INFORMATION_SCHEMA.CATALOGS INFORMATION_SCHEMA.USERS [42000-199]
+2022-04-12 20:47:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (CAR: ""CROWD"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."CAR"("ID","BRAND","COLOUR","CROWD","FUEL","GEARBOX","KM","LOOK","PERFORMANCE","PERSON","PRICE","ROLLING","TYPE","YEAR")VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?) -- (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14) [22018-199]
+2022-04-12 20:47:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (CAR: ""CROWD"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."CAR"("ID","BRAND","COLOUR","CROWD","FUEL","GEARBOX","KM","LOOK","PERFORMANCE","PERSON","PRICE","ROLLING","TYPE","YEAR")VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?) -- (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14) [22018-199]
+2022-04-12 21:19:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (CAR: ""CROWD"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."CAR"("ID","BRAND","COLOUR","CROWD","FUEL","GEARBOX","KM","LOOK","PERFORMANCE","PERSON","PRICE","ROLLING","TYPE","YEAR")VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?) -- (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14) [22018-199]
+2022-04-12 21:19:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (CAR: ""CROWD"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."CAR"("ID","BRAND","COLOUR","CROWD","FUEL","GEARBOX","KM","LOOK","PERFORMANCE","PERSON","PRICE","ROLLING","TYPE","YEAR")VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?) -- (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14) [22018-199]
+2022-04-12 21:34:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (CAR: ""KM"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."CAR"("ID","BRAND","COLOUR","CROWD","FUEL","GEARBOX","KM","LOOK","PERFORMANCE","PERSON","PRICE","ROLLING","TYPE","YEAR")VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?) -- (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14) [22018-199]
+2022-04-12 21:34:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (CAR: ""KM"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."CAR"("ID","BRAND","COLOUR","CROWD","FUEL","GEARBOX","KM","LOOK","PERFORMANCE","PERSON","PRICE","ROLLING","TYPE","YEAR")VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?) -- (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14) [22018-199]
+2022-04-12 22:06:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column """EMAIL"" VARCHAR(255)": "STRINGDECODE('Sorsz\u00e1m\tN\u00e9v\tE-Mail\tLakc\u00edm\tTelefon\tJelsz\u00f3 1\tFarag\u00f3 Lajos\tflajos75@freemail.hu\t3358... (1983)"; SQL statement:
+INSERT INTO "PUBLIC"."USER"("ID","ADRESS","NAME","PASSWORD","PHONE","USERNAME","EMAIL")VALUES(?,?,?,?,?,?,?) [22001-199]
+2022-04-12 22:06:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column """EMAIL"" VARCHAR(255)": "STRINGDECODE('Sorsz\u00e1m\tN\u00e9v\tE-Mail\tLakc\u00edm\tTelefon\tJelsz\u00f3 1\tFarag\u00f3 Lajos\tflajos75@freemail.hu\t3358... (1983)"; SQL statement:
+INSERT INTO "PUBLIC"."USER"("ID","ADRESS","NAME","PASSWORD","PHONE","USERNAME","EMAIL")VALUES(?,?,?,?,?,?,?) [22001-199]
+2022-04-12 22:30:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (CAR: ""ROLLING"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."CAR"("ID","BRAND","COLOUR","CROWD","FUEL","GEARBOX","KM","LOOK","PERFORMANCE","PERSON","PRICE","ROLLING","TYPE","YEAR")VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?) -- (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14) [22018-199]
+2022-04-12 22:30:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (CAR: ""ROLLING"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."CAR"("ID","BRAND","COLOUR","CROWD","FUEL","GEARBOX","KM","LOOK","PERFORMANCE","PERSON","PRICE","ROLLING","TYPE","YEAR")VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?) -- (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14) [22018-199]
+2022-04-12 22:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (CAR: ""CROWD"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."CAR"("ID","BRAND","COLOUR","CROWD","FUEL","GEARBOX","KM","LOOK","PERFORMANCE","PERSON","PRICE","ROLLING","TYPE","YEAR")VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?) -- (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14) [22018-199]
+2022-04-12 22:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (CAR: ""CROWD"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."CAR"("ID","BRAND","COLOUR","CROWD","FUEL","GEARBOX","KM","LOOK","PERFORMANCE","PERSON","PRICE","ROLLING","TYPE","YEAR")VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?) -- (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14) [22018-199]
