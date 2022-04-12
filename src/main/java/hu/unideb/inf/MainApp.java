@@ -1,5 +1,8 @@
 package hu.unideb.inf;
 
+import hu.unideb.inf.model.Car;
+import hu.unideb.inf.model.CarDAO;
+import hu.unideb.inf.model.JpaCarDAO;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -12,7 +15,6 @@ import java.util.logging.Logger;
 
 public class MainApp extends Application {
 
-    //
     @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/fxml/login.fxml"));
@@ -20,26 +22,41 @@ public class MainApp extends Application {
         stage.setTitle("Bejelentkezés");
         stage.setScene(scene);
         stage.show();
-
     }
-    //
-    // misi commit
-    public static void main(String[] args) {
-//
 
-        try {
-            startDatabase();
-        } catch (SQLException ex) {
-            Logger.getLogger(MainApp.class.getName()).log(Level.SEVERE, null, ex);
-            return;
+    public static void handleData(CarDAO carDAO){
+        Car car = new Car();
+        car.setBrand("AUDI");
+        car.setColour("fekete");
+        car.setCrowd(423);
+        car.setGearbox("manualis");
+        car.setKm(2341312);
+        car.setLook("kombi");
+        car.setPerformance(432);
+        car.setPerson("5");
+        car.setRolling(5431);
+        car.setType("sa");
+        car.setPrice(43141);
+        carDAO.saveCar(car);
+    }
+
+    public static void main(String[] args )throws SQLException {
+
+        startDatabase();
+
+        try (CarDAO carDAO = new JpaCarDAO()) {
+            //handleData(carDAO);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         launch(args);
         stopDatabase();
+
+
     }
-    //
 
     private static final Server s = new Server();
-    
+
     private static void startDatabase() throws SQLException {
         s.runTool("-tcp", "-web", "-ifNotExists");
     }
@@ -47,5 +64,5 @@ public class MainApp extends Application {
     private static void stopDatabase()  {
         s.shutdown();
     }
-    
+
 }

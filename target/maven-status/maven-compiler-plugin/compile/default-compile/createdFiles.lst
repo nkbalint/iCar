@@ -1,3 +1,10 @@
-hu\unideb\inf\model\Student.class
+hu\unideb\inf\model\JpaCarDAO.class
+hu\unideb\inf\model\Admin.class
+hu\unideb\inf\model\Car.class
+hu\unideb\inf\model\User.class
+hu\unideb\inf\model\JpaUserDAO.class
+hu\unideb\inf\model\UserDAO.class
 hu\unideb\inf\MainApp.class
-hu\unideb\inf\controller\FXMLStudentsSceneController.class
+hu\unideb\inf\model\CarDAO.class
+hu\unideb\inf\model\JpaAdminDAO.class
+hu\unideb\inf\model\AdminDAO.class
