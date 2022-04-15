@@ -1,5 +1,6 @@
 package hu.unideb.inf.controller;
 
+import hu.unideb.inf.model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +16,8 @@ import javafx.stage.Stage;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class LoginController {
 
@@ -31,19 +34,50 @@ public class LoginController {
     private Button registrationButton;
 
     @FXML
-    void clickedLoginButton(ActionEvent event) {
-
-        if(emailLabel.getText().isEmpty() || passwordLabel.getText().isEmpty()){
+    void clickedLoginButton(ActionEvent event) throws Exception {
+        boolean succ=false;
+        if (emailLabel.getText().isEmpty() || passwordLabel.getText().isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.ERROR,
                     "Az e-mail vagy jelszó mező üres!");
             alert.showAndWait();
         }
-        //
-        //keresés az adatbázisban
-        //
-
+        List<User> felhasznalok = new ArrayList<>();
+        List<Admin> adminok = new ArrayList<>();
+        try (UserDAO cDAO = new JpaUserDAO();
+             AdminDAO aDAO = new JpaAdminDAO();) {
+            felhasznalok = cDAO.getUserAll();
+            adminok = aDAO.getAdminsAll();
+            for (Admin admin :adminok){
+                if(admin.getUserName().equals(emailLabel.getText())&& admin.getPassword().equals(passwordLabel.getText())){//jo admin
+                    // invalidLabel.setVisible(false);
+                    succ=true;
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setHeaderText("admin");
+                    alert.showAndWait();
+                    //activeAdmin = aDAO.getAdminbyID(admin.getId());
+                    // AdminDashboardController.getActiveAdmin(activeAdmin);
+                    //changeScene(event,"/fxml/AdminDashboard.fxml");
+                }
+            }//admin
+            for (User user : felhasznalok) {
+                if (user.getEmail().equals(emailLabel.getText()) && user.getPassword().equals(passwordLabel.getText())) {//jo user
+                    //   invalidLabel.setVisible(false);
+                    //   activeCustomer = cDAO.getCustomerbyID(customer.getId());
+                    //   CustomerDashboardController.getActiveCustomer(activeCustomer);
+                    //   changeScene(event,"/fxml/CustomerDashboard.fxml");
+                    succ=true;
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setHeaderText("user");
+                    alert.showAndWait();
+                }
+            }
+        }
+        if(succ==false) {
+            Alert alert = new Alert(Alert.AlertType.ERROR,
+                    "Hibás e-mail vagy jelszó!");
+            alert.showAndWait();
+        }
     }
-
     @FXML
     void clickedRegistrationButton(ActionEvent event) {
         Parent register = null;
@@ -54,10 +88,8 @@ public class LoginController {
         }
         Scene registerScene = new Scene(register);
         Stage window = new Stage();
-        //window.getIcons().add(new Image(new FileInputStream("src\\main\\resources\\Képek\\bejelentkező.jpg")));
         window.setScene(registerScene);
         window.setTitle("Regisztráció");
-        //window.getIcons().add(new Image("pontus/Image/logo.jpg"));
         window.show();
     }
 

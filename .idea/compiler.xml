@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="eredeti" />
         <module name="JavaFX11" />
+        <module name="git" />
       </profile>
     </annotationProcessing>
   </component>

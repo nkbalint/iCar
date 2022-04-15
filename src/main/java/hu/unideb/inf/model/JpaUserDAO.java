@@ -42,6 +42,12 @@ public class JpaUserDAO implements UserDAO{
     }
 
     @Override
+    public List<User> getUserAll() {
+        String sqlstr = "SELECT user FROM User user";
+        TypedQuery<User> query = entityManager.createQuery(sqlstr, User.class);
+        return query.getResultList();
+    }
+    @Override
     public void close() throws Exception {
         entityManager.close();
         entityManagerFactory.close();

@@ -24,6 +24,9 @@ public class Admin {
         this.password = password;
     }
 
+    public Admin() {
+    }
+
     public Admin(String userName) {
         this.userName = userName;
     }
@@ -37,8 +40,8 @@ public class Admin {
         return "Admin{" +
                 "id=" + id +
                 ", userName='" + userName + '\'' +
-        ", password='" + password + '\'' +
-        '}';
+                ", password='" + password + '\'' +
+                '}';
     }
     public void setId(Integer id){
         this.id=id;
