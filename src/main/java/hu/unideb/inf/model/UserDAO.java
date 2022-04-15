@@ -11,4 +11,6 @@ public interface UserDAO extends AutoCloseable {
     public void updateUser(User a); //U
 
     public List<User> getUser(); //R
+
+    public  List<User> getUserAll();
 }

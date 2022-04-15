@@ -1,5 +1,6 @@
 package hu.unideb.inf.controller;
 
+import hu.unideb.inf.model.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -64,7 +65,7 @@ public class RegisterController {
     }
 
     @FXML
-    void clickedRegistButton(ActionEvent event) {
+    void clickedRegistButton(ActionEvent event) throws Exception {
 
         boolean cont = true;
         noValidName.setVisible(false);
@@ -105,9 +106,9 @@ public class RegisterController {
 
 
         if(cont==true){
-            //
-            // do the register
-            //
+            System.out.println("regi");
+            User.register(nameLabel.getText(), addressLabel.getText(),telefonnumberLabel.getText(),passwordLabel.getText(), emailLabel.getText());
+
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setHeaderText("Sikeresen regisztrált!");
             alert.showAndWait();
@@ -117,5 +118,5 @@ public class RegisterController {
         }
     }
 
-    
+
 }

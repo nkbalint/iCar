@@ -8,14 +8,26 @@ import java.io.Serializable;
 public class User implements Serializable  {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
     private String name;
-    private String username;
+    // private String username;
     private String adress;
     private String phone;
     private String password;
     private String email;
+
+    public User() {
+    }
+
+    public User(String adress, String name, String password, String phone, String email) {
+        this.name = name;
+        //  this.username = username;
+        this.adress = adress;
+        this.phone = phone;
+        this.password = password;
+        this.email = email;
+    }
 
     public int getId() {
         return id;
@@ -58,19 +70,26 @@ public class User implements Serializable  {
     }
 
 
-    public String getUsername() {
-        return username;
-    }
+    /*  public String getUsername() {
+          return username;
+      }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
+      public void setUsername(String username) {
+          this.username = username;
+      }
+     */
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public static void register(String name,  String adress, String phone, String password, String email) throws Exception {
+        User user = new User(adress,  name, password, phone,email);
+        try (UserDAO cDAO= new JpaUserDAO();) {
+            cDAO.saveUser(user);
+        }
     }
 }
