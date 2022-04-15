@@ -74,7 +74,6 @@ public class RegisterController {
         noValidPhone.setVisible(false);
         noValidPass.setVisible(false);
         noMatchingPass.setVisible(false);
-        //eloszor nincs hibauzenet
         if(nameLabel.getText().isEmpty()){
             noValidName.setVisible(true);
             cont = false;
