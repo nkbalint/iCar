@@ -1,0 +1,162 @@
+/*Ablak*/
+
+#windowPane {
+    /*-fx-background-color: linear-gradient(to right, #0F1C6E, #2BEF13);*/
+    -fx-background-color: rgb(15, 13, 68);
+}
+
+/*Tábla*/
+.tab-pane {
+    -fx-background-color: white;
+}
+
+.tab-pane .tab-header-background {
+    -fx-background-color: gray;
+}
+
+.tab-pane .tab {
+    -fx-padding: 0px 33px 0px 33px;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px 10px 0px 0px;
+    -fx-cursor: pointer;
+}
+
+.tab-pane .tab:selected, #tabAnchPane1,  #tabAnchPane2, #tabAnchPane3 {
+    -fx-background-color: rgb(0, 128, 255);
+}
+
+/*Admin tábla*/
+
+#deleteCarButton, #deleteUserButton, #deleteAdminButton {
+    -fx-background-color: rgb(255, 61, 61);
+    -fx-background-radius: 20px;
+}
+ 
+#refreshAdminButton, 
+#refreshUserButton, 
+#refreshCarButton{
+    -fx-background-radius: 20px;
+}
+
+/*Autó tábla*/
+
+#addCarButton,
+#additionUserButton,
+#additionAdminButton {
+    -fx-background-color: rgb(71, 255, 61);
+    -fx-background-radius: 20px;
+}
+
+#carTableView .column-header{
+    -fx-background-color: rgb(157, 157, 157);
+}
+
+#carTableView .table-cell {
+    -fx-border-color: white;
+    -fx-text-fill: white;
+}
+
+#carTableView .table-row-cell:odd {
+    -fx-background-color: rgb(15, 13, 68);
+}
+
+#carTableView .table-row-cell:even {
+    -fx-background-color: rgb(21, 18, 106);
+}
+
+#carTableView .table-row-cell:hover {
+    -fx-background-color: rgb(0, 168, 159);
+}
+
+#carTableView .table-row-cell:selected {
+    -fx-background-color: rgb(0, 255, 242);
+}
+
+/*Felhasználó tábla*/
+
+#userTableView .column-header{
+    -fx-background-color: rgb(157, 157, 157);
+}
+
+#userTableView .table-cell {
+    -fx-border-color: white;
+    -fx-text-fill: white;
+}
+
+#userTableView .table-row-cell:odd {
+    -fx-background-color: rgb(15, 13, 68);
+}
+
+#userTableView .table-row-cell:even {
+    -fx-background-color: rgb(21, 18, 106);
+}
+
+#userTableView .table-row-cell:hover {
+    -fx-background-color: rgb(0, 168, 159);
+}
+
+#userTableView .table-row-cell:selected {
+    -fx-background-color: rgb(0, 255, 242);
+}
+
+/*Admin tábla*/
+
+#adminTableView .column-header{
+    -fx-background-color: rgb(157, 157, 157);
+}
+
+#adminTableView .table-cell {
+    -fx-border-color: white;
+    -fx-text-fill: white;
+}
+
+#adminTableView .table-row-cell:odd {
+    -fx-background-color: rgb(15, 13, 68);
+}
+
+#adminTableView .table-row-cell:even {
+    -fx-background-color: rgb(21, 18, 106);
+}
+
+#adminTableView .table-row-cell:hover {
+    -fx-background-color: rgb(0, 168, 159);
+}
+
+#adminTableView .table-row-cell:selected {
+    -fx-background-color: rgb(0, 255, 242);
+}
+
+#logoutLink {
+    -fx-border-color: transparent;
+    -fx-underline: false;
+    -fx-text-fill: white;
+}
+
+#logoutLink:hover {
+    -fx-text-fill: rgb(0, 128, 255);
+}
+
+
+#addBrandTextField:focused,
+#addTypeTextField:focused,
+#addColorTextField:focused,
+#addFuelTextField:focused,
+#addPriceTextField:focused,
+#addPersonTextField:focused,
+#addKMTextField:focused,
+#addYearTextField:focused,
+#addRollingTextField:focused,
+#addPerformanceTextField:focused,
+#addLookTextField:focused,
+#addCrowdTextField:focused,
+#addGearboxTextField:focused {
+    -fx-effect: dropshadow(gaussian, rgb(71, 255, 61), 1, 1.0, 0.0, 0.0);
+    -fx-border-color: rgb(71, 255, 61);
+}
+
+#startPriceTextField:focused,
+#endPriceTextField:focused {
+    -fx-effect: dropshadow(gaussian, rgb(164, 61, 255), 1, 1.0, 0.0, 0.0);
+    -fx-border-color: rgb(164, 61, 255);
+}

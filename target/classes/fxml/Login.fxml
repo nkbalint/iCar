@@ -61,7 +61,7 @@
                         <Font name="Century" size="35.0" />
                      </font>
                   </Label>
-                  <Label layoutX="23.0" layoutY="96.0" text="Email:">
+                  <Label layoutX="23.0" layoutY="96.0" text="Felhasználónév:">
                      <font>
                         <Font name="Century" size="25.0" />
                      </font>
@@ -71,7 +71,7 @@
                         <Font name="Century" size="25.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="emailLabel" alignment="CENTER" layoutX="23.0" layoutY="148.0" prefHeight="36.0" prefWidth="228.0" promptText="Kérlek add meg az email címed!" style="-fx-background-radius: 30;">
+                  <TextField fx:id="usernameLabel" alignment="CENTER" layoutX="23.0" layoutY="148.0" prefHeight="36.0" prefWidth="255.0" promptText="Kérlek add meg a felhasználóneved!" style="-fx-background-radius: 30;">
                      <font>
                         <Font name="Century" size="14.0" />
                      </font>
@@ -103,7 +103,7 @@
                         <Image url="@../Képek/iCar_logó.png" />
                      </image>
                   </ImageView>
-                  <PasswordField fx:id="passwordLabel" alignment="CENTER" layoutX="23.0" layoutY="257.0" prefHeight="36.0" prefWidth="228.0" promptText="Kérlek add meg a jelszavad!" style="-fx-background-radius: 30;">
+                  <PasswordField fx:id="passwordLabel" alignment="CENTER" layoutX="23.0" layoutY="257.0" prefHeight="36.0" prefWidth="255.0" promptText="Kérlek add meg a jelszavad!" style="-fx-background-radius: 30;">
                      <font>
                         <Font name="Century" size="14.0" />
                      </font>

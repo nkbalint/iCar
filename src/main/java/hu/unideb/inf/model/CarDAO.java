@@ -11,4 +11,6 @@ public interface CarDAO extends AutoCloseable {
     public void updateCar(Car a); //U
 
     public List<Car> getCar(); //R
+
+    public List<Car> getCarAll();
 }

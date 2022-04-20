@@ -45,4 +45,11 @@ public class JpaCarDAO implements CarDAO{
         entityManagerFactory.close();
     }
 
+    @Override
+    public List<Car> getCarAll() {
+        String sqlstr="SELECT car FROM Car car";
+        TypedQuery<Car> query=entityManager.createQuery(sqlstr,Car.class);
+        return query.getResultList();
+    }
+
 }

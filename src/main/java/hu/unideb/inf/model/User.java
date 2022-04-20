@@ -11,7 +11,7 @@ public class User implements Serializable  {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
     private String name;
-    // private String username;
+    private String username;
     private String adress;
     private String phone;
     private String password;
@@ -20,9 +20,9 @@ public class User implements Serializable  {
     public User() {
     }
 
-    public User(String adress, String name, String password, String phone, String email) {
+    public User(String adress, String username, String name, String password, String phone, String email) {
         this.name = name;
-        //  this.username = username;
+        this.username = username;
         this.adress = adress;
         this.phone = phone;
         this.password = password;
@@ -69,15 +69,14 @@ public class User implements Serializable  {
         this.password = password;
     }
 
+    public String getUsername() {
+        return username;
+    }
 
-    /*  public String getUsername() {
-          return username;
-      }
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-      public void setUsername(String username) {
-          this.username = username;
-      }
-     */
     public String getEmail() {
         return email;
     }
@@ -86,8 +85,8 @@ public class User implements Serializable  {
         this.email = email;
     }
 
-    public static void register(String name,  String adress, String phone, String password, String email) throws Exception {
-        User user = new User(adress,  name, password, phone,email);
+    public static void register(String name, String username,  String adress, String phone, String password, String email) throws Exception {
+        User user = new User(adress, username,  name, password, phone,email);
         try (UserDAO cDAO= new JpaUserDAO();) {
             cDAO.saveUser(user);
         }

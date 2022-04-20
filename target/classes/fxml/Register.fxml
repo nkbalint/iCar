@@ -44,24 +44,24 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.controller.RegisterController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="648.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.controller.RegisterController">
    <children>
-      <AnchorPane fx:id="handleScreen" prefHeight="200.0" prefWidth="200.0">
+      <AnchorPane fx:id="handleScreen" prefHeight="622.0" prefWidth="520.0">
          <children>
-            <ImageView fitHeight="600.0" fitWidth="480.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="662.0" fitWidth="520.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Képek/auto2.jpg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="73.0" fitWidth="115.0" layoutX="182.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="73.0" fitWidth="115.0" layoutX="203.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Képek/iCar_logó.png" />
                </image>
             </ImageView>
-            <AnchorPane layoutX="54.0" layoutY="109.0" opacity="0.7" prefHeight="465.0" prefWidth="370.0" style="-fx-background-color: white; -fx-background-radius: 40;" />
-            <AnchorPane layoutX="54.0" layoutY="109.0" prefHeight="465.0" prefWidth="370.0" style="-fx-background-radius: 40;">
+            <AnchorPane layoutX="50.0" layoutY="100.0" opacity="0.7" prefHeight="510.0" prefWidth="420.0" style="-fx-background-color: white; -fx-background-radius: 40;" />
+            <AnchorPane layoutX="50.0" layoutY="100.0" prefHeight="510.0" prefWidth="410.0" style="-fx-background-radius: 40;">
                <children>
-                  <Label alignment="CENTER" layoutY="14.0" prefHeight="50.0" prefWidth="370.0" text="Regisztráció">
+                  <Label alignment="CENTER" layoutY="14.0" prefHeight="50.0" prefWidth="420.0" text="Regisztráció">
                      <font>
                         <Font name="Century" size="35.0" />
                      </font>
@@ -71,62 +71,62 @@
                         <Font name="Century" size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="nameLabel" alignment="CENTER" layoutX="130.0" layoutY="90.0" prefHeight="26.0" prefWidth="225.0" promptText="Valami Péter" style="-fx-background-radius: 30;">
+                  <TextField fx:id="nameLabel" alignment="CENTER" layoutX="180.0" layoutY="88.0" prefHeight="26.0" prefWidth="225.0" promptText="Valami Péter" style="-fx-background-radius: 30;">
                      <font>
                         <Font name="Century" size="12.0" />
                      </font>
                   </TextField>
-                  <Label layoutX="14.0" layoutY="145.0" text="Email:">
+                  <Label layoutX="14.0" layoutY="189.0" text="Email:">
                      <font>
                         <Font name="Century" size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="emailLabel" alignment="CENTER" layoutX="130.0" layoutY="144.0" prefHeight="26.0" prefWidth="225.0" promptText="valami@gmail.com" style="-fx-background-radius: 30;">
+                  <TextField fx:id="emailLabel" alignment="CENTER" layoutX="180.0" layoutY="186.0" prefHeight="26.0" prefWidth="225.0" promptText="valami@gmail.com" style="-fx-background-radius: 30;">
                      <font>
                         <Font name="Century" size="12.0" />
                      </font>
                   </TextField>
-                  <Label layoutX="14.0" layoutY="201.0" text="Lakcím:">
+                  <Label layoutX="14.0" layoutY="236.0" text="Lakcím:">
                      <font>
                         <Font name="Century" size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="addressLabel" alignment="CENTER" layoutX="130.0" layoutY="200.0" prefHeight="26.0" prefWidth="225.0" promptText="4028, Debrecen, Kassai út 26" style="-fx-background-radius: 30;">
+                  <TextField fx:id="addressLabel" alignment="CENTER" layoutX="180.0" layoutY="233.0" prefHeight="26.0" prefWidth="225.0" promptText="4028, Debrecen, Kassai út 26" style="-fx-background-radius: 30;">
                      <font>
                         <Font name="Century" size="12.0" />
                      </font>
                   </TextField>
-                  <Label layoutX="14.0" layoutY="254.0" text="Telefon:">
+                  <Label layoutX="14.0" layoutY="285.0" text="Telefon:">
                      <font>
                         <Font name="Century" size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="telefonnumberLabel" alignment="CENTER" layoutX="130.0" layoutY="253.0" prefHeight="26.0" prefWidth="225.0" promptText="06304455667" style="-fx-background-radius: 30;">
+                  <TextField fx:id="telefonnumberLabel" alignment="CENTER" layoutX="180.0" layoutY="282.0" prefHeight="26.0" prefWidth="225.0" promptText="06304455667" style="-fx-background-radius: 30;">
                      <font>
                         <Font name="Century" size="12.0" />
                      </font>
                   </TextField>
-                  <Label layoutX="14.0" layoutY="306.0" text="Jelszó:">
+                  <Label layoutX="14.0" layoutY="332.0" text="Jelszó:">
                      <font>
                         <Font name="Century" size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="passwordLabel" alignment="CENTER" layoutX="130.0" layoutY="305.0" prefHeight="26.0" prefWidth="225.0" promptText="Valami1234" style="-fx-background-radius: 30;">
+                  <TextField fx:id="passwordLabel" alignment="CENTER" layoutX="180.0" layoutY="328.0" prefHeight="26.0" prefWidth="225.0" promptText="Valami1234" style="-fx-background-radius: 30;">
                      <font>
                         <Font name="Century" size="12.0" />
                      </font>
                   </TextField>
-                  <Label layoutX="14.0" layoutY="360.0" text="Jelszó újra:">
+                  <Label layoutX="14.0" layoutY="382.0" text="Jelszó újra:">
                      <font>
                         <Font name="Century" size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="passwordAgainLabel" alignment="CENTER" layoutX="130.0" layoutY="359.0" prefHeight="26.0" prefWidth="225.0" promptText="Valami1234" style="-fx-background-radius: 30;">
+                  <TextField fx:id="passwordAgainLabel" alignment="CENTER" layoutX="180.0" layoutY="379.0" prefHeight="26.0" prefWidth="225.0" promptText="Valami1234" style="-fx-background-radius: 30;">
                      <font>
                         <Font name="Century" size="12.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="registerButton" layoutX="36.0" layoutY="408.0" mnemonicParsing="false" onAction="#clickedRegistButton" prefHeight="22.0" prefWidth="142.0" style="-fx-background-radius: 30;" text="Regisztrálás">
+                  <Button fx:id="registerButton" layoutX="57.0" layoutY="452.0" mnemonicParsing="false" onAction="#clickedRegistButton" prefHeight="22.0" prefWidth="142.0" style="-fx-background-radius: 30;" text="Regisztrálás">
                      <font>
                         <Font name="Century" size="16.0" />
                      </font>
@@ -137,7 +137,7 @@
                         <DropShadow />
                      </effect>
                   </Button>
-                  <Button fx:id="backButton" layoutX="199.0" layoutY="408.0" mnemonicParsing="false" onAction="#clickedBackButton" prefHeight="26.0" prefWidth="142.0" style="-fx-background-radius: 30;" text="Vissza">
+                  <Button fx:id="backButton" layoutX="220.0" layoutY="452.0" mnemonicParsing="false" onAction="#clickedBackButton" prefHeight="26.0" prefWidth="142.0" style="-fx-background-radius: 30;" text="Vissza">
                      <font>
                         <Font name="Century" size="16.0" />
                      </font>
@@ -148,17 +148,17 @@
                         <DropShadow blurType="GAUSSIAN" />
                      </effect>
                   </Button>
-                  <Label fx:id="noMatchingPass" layoutX="138.0" layoutY="341.0" prefHeight="18.0" prefWidth="213.0" text="Nem egyezik meg a beírt jelszó!" textFill="RED" visible="false">
+                  <Label fx:id="noMatchingPass" layoutX="180.0" layoutY="359.0" prefHeight="18.0" prefWidth="213.0" text="Nem egyezik meg a beírt jelszó!" textFill="RED" visible="false">
                      <font>
                         <Font name="Century" size="14.0" />
                      </font>
                   </Label>
-                  <Label fx:id="noValidEmail" layoutX="145.0" layoutY="123.0" prefHeight="18.0" prefWidth="188.0" text="Nem megfelelő e-mail cím!" textFill="RED" visible="false">
+                  <Label fx:id="noValidEmail" layoutX="180.0" layoutY="166.0" prefHeight="18.0" prefWidth="188.0" text="Nem megfelelő e-mail cím!" textFill="RED" visible="false">
                      <font>
                         <Font name="Century" size="14.0" />
                      </font>
                   </Label>
-                  <Label fx:id="noValidPhone" layoutX="140.0" layoutY="231.0" prefHeight="18.0" prefWidth="213.0" text="A telefon mező nem lehet üres!" textFill="RED" visible="false">
+                  <Label fx:id="noValidPhone" layoutX="180.0" layoutY="261.0" prefHeight="18.0" prefWidth="213.0" text="A telefon mező nem lehet üres!" textFill="RED" visible="false">
                      <font>
                         <Font name="Century" size="14.0" />
                      </font>
@@ -166,7 +166,12 @@
                         <Insets />
                      </opaqueInsets>
                   </Label>
-                  <Label fx:id="noValidPass" layoutX="141.0" layoutY="282.0" prefHeight="18.0" prefWidth="219.0" text="A jelszó nem megfelelő!" textFill="RED" visible="false">
+                  <Label fx:id="noValidName" layoutX="180.0" layoutY="68.0" prefHeight="17.0" prefWidth="188.0" text="A  név mező nem lehet üres!" textFill="RED" visible="false">
+                     <font>
+                        <Font name="Century" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="noValidPass" layoutX="180.0" layoutY="309.0" prefHeight="18.0" prefWidth="219.0" text="A jelszó nem megfelelő!" textFill="RED" visible="false">
                      <font>
                         <Font name="Century" size="14.0" />
                      </font>
@@ -174,21 +179,31 @@
                         <Insets />
                      </opaqueInsets>
                   </Label>
-                  <Label fx:id="noValidName" layoutX="147.0" layoutY="68.0" prefHeight="17.0" prefWidth="188.0" text="A  név mező nem lehet üres!" textFill="RED" visible="false">
+                  <Label layoutX="14.0" layoutY="142.0" text="Felhasználónév:">
+                     <font>
+                        <Font name="Century" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="usernameLabel" alignment="CENTER" layoutX="180.0" layoutY="139.0" prefHeight="26.0" prefWidth="225.0" promptText="Péter123" style="-fx-background-radius: 30;">
+                     <font>
+                        <Font name="Century" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="noValidUsername" layoutX="180.0" layoutY="119.0" prefHeight="18.0" prefWidth="219.0" text="A felhasználónév nem lehet üres!" textFill="RED" visible="false">
                      <font>
                         <Font name="Century" size="14.0" />
                      </font>
+                  </Label>
+                  <Label fx:id="noValidAddress" layoutX="180.0" layoutY="212.0" prefHeight="18.0" prefWidth="203.0" text="A  lakcím mező nem lehet üres!" textFill="RED" visible="false">
+                     <font>
+                        <Font name="Century" size="14.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
                   </Label>
                </children>
             </AnchorPane>
-            <Label fx:id="noValidAddress" layoutX="199.0" layoutY="289.0" prefHeight="18.0" prefWidth="203.0" text="A  lakcím mező nem lehet üres!" textFill="RED" visible="false">
-               <font>
-                  <Font name="Century" size="14.0" />
-               </font>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-            </Label>
          </children>
       </AnchorPane>
    </children>

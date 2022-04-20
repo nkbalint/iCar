@@ -14,9 +14,6 @@ import javafx.stage.Stage;
 public class RegisterController {
 
     @FXML
-    private AnchorPane handleScreen;
-
-    @FXML
     private TextField addressLabel;
 
     @FXML
@@ -26,19 +23,10 @@ public class RegisterController {
     private TextField emailLabel;
 
     @FXML
+    private AnchorPane handleScreen;
+
+    @FXML
     private TextField nameLabel;
-
-    @FXML
-    private TextField passwordAgainLabel;
-
-    @FXML
-    private TextField passwordLabel;
-
-    @FXML
-    private Button registerButton;
-
-    @FXML
-    private TextField telefonnumberLabel;
 
     @FXML
     private Label noMatchingPass;
@@ -59,6 +47,24 @@ public class RegisterController {
     private Label noValidPhone;
 
     @FXML
+    private Label noValidUsername;
+
+    @FXML
+    private TextField passwordAgainLabel;
+
+    @FXML
+    private TextField passwordLabel;
+
+    @FXML
+    private Button registerButton;
+
+    @FXML
+    private TextField telefonnumberLabel;
+
+    @FXML
+    private TextField usernameLabel;
+
+    @FXML
     void clickedBackButton(ActionEvent event) {
         Stage stage = (Stage) handleScreen.getScene().getWindow();
         stage.close();
@@ -69,6 +75,7 @@ public class RegisterController {
 
         boolean cont = true;
         noValidName.setVisible(false);
+        noValidUsername.setVisible(false);
         noValidEmail.setVisible(false);
         noValidAddress.setVisible(false);
         noValidPhone.setVisible(false);
@@ -76,6 +83,10 @@ public class RegisterController {
         noMatchingPass.setVisible(false);
         if(nameLabel.getText().isEmpty()){
             noValidName.setVisible(true);
+            cont = false;
+        }
+        if(usernameLabel.getText().isEmpty()){
+            noValidUsername.setVisible(true);
             cont = false;
         }
         if(addressLabel.getText().isEmpty()){
@@ -106,7 +117,7 @@ public class RegisterController {
 
         if(cont==true){
             System.out.println("regi");
-            User.register(nameLabel.getText(), addressLabel.getText(),telefonnumberLabel.getText(),passwordLabel.getText(), emailLabel.getText());
+            User.register(nameLabel.getText(), usernameLabel.getText(), addressLabel.getText(),telefonnumberLabel.getText(),passwordLabel.getText(), emailLabel.getText());
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setHeaderText("Sikeresen regisztrált!");
