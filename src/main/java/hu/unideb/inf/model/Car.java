@@ -12,17 +12,17 @@ public class Car implements Serializable {
     private Integer id;
     private String brand;
     private String type;
-    private int year;
+    private Integer year;
     private String fuel;
-    private int km;
+    private Integer km;
     private String look;
     private String person;
-    private int crowd;
-    private int rolling;
-    private int performance;
+    private Integer crowd;
+    private Integer rolling;
+    private Integer performance;
     private String gearbox;
     private String colour;
-    private int price;
+    private Integer price;
 
 
     public Integer getId() {
