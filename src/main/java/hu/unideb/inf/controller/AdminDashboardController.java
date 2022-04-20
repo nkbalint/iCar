@@ -349,6 +349,7 @@ public class AdminDashboardController {
     @FXML
     void clickedAddAdminButton(ActionEvent event) {
 
+
     }
 
     @FXML
@@ -358,6 +359,7 @@ public class AdminDashboardController {
 
     @FXML
     void clickedAddUserButton(ActionEvent event) {
+
 
     }
 
