@@ -321,7 +321,6 @@ public class AdminDashboardController {
         userPasswordCol.setCellValueFactory(new PropertyValueFactory<>("password"));
         userEmailCol.setCellValueFactory(new PropertyValueFactory<>("email"));
 
-
         userTableView.setItems(FXCollections.observableArrayList(userList));
     }
 
