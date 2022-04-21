@@ -3,11 +3,17 @@ package hu.unideb.inf.controller;
 import hu.unideb.inf.model.*;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 
 import javafx.event.ActionEvent;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 import java.util.List;
 
 public class AdminDashboardController {
@@ -380,7 +386,22 @@ public class AdminDashboardController {
 
     @FXML
     void clickedLogoutLink(ActionEvent event) {
-
+        Stage stage = (Stage) windowPane.getScene().getWindow();
+        stage.close();
+        Parent login = null;
+        try
+        {
+            login = FXMLLoader.load(getClass().getResource("/fxml/Login.fxml"));
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        Scene loginScene = new Scene(login);
+        Stage window = new Stage();
+        window.setScene(loginScene);
+        window.setTitle("Bejelentkezes");
+        window.show();
     }
 
     @FXML

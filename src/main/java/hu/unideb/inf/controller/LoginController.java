@@ -106,7 +106,8 @@ public class LoginController {
         window.setScene(registerScene);
         window.setTitle("Regisztráció");
         window.show();
+        Stage stage = (Stage) loginButton.getScene().getWindow();
+        stage.close();
     }
-
 }
 
