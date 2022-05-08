@@ -4,6 +4,7 @@ import hu.unideb.inf.model.*;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -14,6 +15,7 @@ import javafx.event.ActionEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class AdminDashboardController {
@@ -353,9 +355,62 @@ public class AdminDashboardController {
     }
 
     @FXML
-    void clickedAddAdminButton(ActionEvent event) {
+    void clickedAddAdminButton(ActionEvent event) throws Exception {
+        boolean cont = true;
+        nameErrorLabel2.setVisible(false);
+        usernameErrorLabel2.setVisible(false);
+        emailErrorLabel2.setVisible(false);
+        addressErrorLabel2.setVisible(false);
+        phoneErrorLabel2.setVisible(false);
+        passwordErrorLabel2.setVisible(false);
+
+        if(nameTextLabel2.getText().isEmpty()){
+            nameErrorLabel2.setVisible(true);
+            cont = false;
+        }
+
+        List<Admin> adminok = new ArrayList<>();
+
+        try (AdminDAO aDAO = new JpaAdminDAO()) {
+            adminok = aDAO.getAdminsAll();
+            for (Admin admin : adminok) {
+                if (admin.getUserName().equals(usernameTextLabel2.getText()) ) {
+                    Alert alert = new Alert(Alert.AlertType.ERROR,
+                            "Ez a felhasználónév foglalt!");
+                    alert.showAndWait();
+                    cont = false;
+                }
+            }
+        }
 
 
+        if(usernameTextLabel2.getText().isEmpty()){
+            usernameErrorLabel2.setVisible(true);
+            cont = false;
+        }
+        if(addressTextLabel2.getText().isEmpty()){
+            addressErrorLabel2.setVisible(true);
+            cont = false;
+        }
+        if(phoneTextLabel2.getText().isEmpty()){
+            phoneErrorLabel2.setVisible(true);
+            cont = false;
+        }
+        if(!emailTextLabel2.getText().matches("^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$")){
+            emailTextLabel2.setVisible(true);
+            cont = false;
+        }
+        if(!passwordTextLabel2.getText().matches( "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$")){
+            passwordErrorLabel2.setVisible(true);
+            Alert alert = new Alert(Alert.AlertType.ERROR,
+                    "A jelszónak tartalmaznia kell legalább egy kisbetűt, nagybetűt, számot, speciális karaktert, valamint 8 és 20 karakter közötti hosszúságúnak kell lennie!");
+            alert.showAndWait();
+            cont = false;
+        }
+        if(cont==true) {
+            Admin.register(nameTextLabel2.getText(), usernameTextLabel2.getText(), addressTextLabel2.getText(), phoneTextLabel2.getText(), passwordTextLabel2.getText(), emailTextLabel2.getText());
+            init_refreshAdmin();
+        }
     }
 
     @FXML
@@ -364,24 +419,80 @@ public class AdminDashboardController {
     }
 
     @FXML
-    void clickedAddUserButton(ActionEvent event) {
+    void clickedAddUserButton(ActionEvent event) throws Exception {
+        boolean cont2 = true;
+        nameErrorLabel1.setVisible(false);
+        usernameErrorLabel1.setVisible(false);
+        emailErrorLabel1.setVisible(false);
+        addressErrorLabel1.setVisible(false);
+        phoneErrorLabel1.setVisible(false);
+        passwordErrorLabel1.setVisible(false);
+        if(nameTextLabel1.getText().isEmpty()){
+            nameErrorLabel1.setVisible(true);
+            cont2 = false;
+        }
+
+        List<User> felhasznalok = new ArrayList<>();
+
+        try (UserDAO cDAO = new JpaUserDAO()) {
+            felhasznalok = cDAO.getUserAll();
+            for (User user : felhasznalok) {
+                if (user.getUsername().equals(usernameTextLabel1.getText()) ) {
+                    Alert alert = new Alert(Alert.AlertType.ERROR,
+                            "Ez a felhasználónév foglalt!");
+                    alert.showAndWait();
+                    cont2 = false;
+                }
+            }
+        }
 
 
+        if(usernameTextLabel1.getText().isEmpty()){
+            usernameErrorLabel1.setVisible(true);
+            cont2 = false;
+        }
+        if(addressTextLabel1.getText().isEmpty()){
+            addressErrorLabel1.setVisible(true);
+            cont2 = false;
+        }
+        if(phoneTextLabel1.getText().isEmpty()){
+            phoneErrorLabel1.setVisible(true);
+            cont2 = false;
+        }
+        if(!emailTextLabel1.getText().matches("^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$")){
+            emailTextLabel1.setVisible(true);
+            cont2 = false;
+        }
+        if(!passwordTextLabel1.getText().matches( "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$")){
+            passwordErrorLabel1.setVisible(true);
+            Alert alert = new Alert(Alert.AlertType.ERROR,
+                    "A jelszónak tartalmaznia kell legalább egy kisbetűt, nagybetűt, számot, speciális karaktert, valamint 8 és 20 karakter közötti hosszúságúnak kell lennie!");
+            alert.showAndWait();
+            cont2 = false;
+        }
+        if(cont2==true) {
+            // System.out.println("regi");
+            User.register(nameTextLabel1.getText(), usernameTextLabel1.getText(), addressTextLabel1.getText(), phoneTextLabel1.getText(), passwordTextLabel1.getText(), emailTextLabel1.getText());
+            init_refreshUser();
+        }
     }
 
     @FXML
     void clickedDeleteAdminButton(ActionEvent event) {
-
+        Admin admin = adminTableView.getSelectionModel().getSelectedItem();
+        adminTableView.getItems().remove(admin);
+        adminDAO.deleteAdmin(admin);
     }
 
     @FXML
     void clickedDeleteCarButton(ActionEvent event) {
-
     }
 
     @FXML
     void clickedDeleteUserButton(ActionEvent event) {
-
+        User user = userTableView.getSelectionModel().getSelectedItem();
+        userTableView.getItems().remove(user);
+        userDAO.deleteUser(user);
     }
 
     @FXML
@@ -406,16 +517,16 @@ public class AdminDashboardController {
 
     @FXML
     void clickedRefreshAdminButton(ActionEvent event) {
-
+    init_refreshAdmin();
     }
 
     @FXML
     void clickedRefreshCarButton(ActionEvent event) {
-
+    init_refreshCar();
     }
 
     @FXML
     void clickedRefreshUserButton(ActionEvent event) {
-
+    init_refreshUser();
     }
 }

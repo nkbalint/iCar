@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.controller.AdminDashboardController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.controller.AdminDashboardController">
    <children>
       <AnchorPane fx:id="windowPane" prefHeight="650.0" prefWidth="1000.0" stylesheets="@../style/style.css">
          <children>
@@ -186,18 +186,18 @@
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
                               </Button>
-                              <Label fx:id="nameErrorLabel1" layoutX="988.0" layoutY="55.0" text="Név megadása kötelező!" textFill="RED" />
-                              <Label fx:id="usernameErrorLabel1" layoutX="986.0" layoutY="110.0" text="Felhasználónév megadása kötelező!" textFill="RED" />
-                              <Label fx:id="passwordErrorLabel1" layoutX="988.0" layoutY="170.0" text="Jelszó megadása kötelező!" textFill="RED" />
-                              <Label fx:id="addressErrorLabel1" layoutX="988.0" layoutY="224.0" text="Lakcím megadása kötelező!" textFill="RED" />
-                              <Label fx:id="phoneErrorLabel1" layoutX="988.0" layoutY="279.0" text="Telefonszám megadása kötelező!" textFill="RED" />
+                              <Label fx:id="nameErrorLabel1" layoutX="988.0" layoutY="55.0" text="Név megadása kötelező!" textFill="RED" visible="false" />
+                              <Label fx:id="usernameErrorLabel1" layoutX="986.0" layoutY="110.0" text="Felhasználónév megadása kötelező!" textFill="RED" visible="false" />
+                              <Label fx:id="passwordErrorLabel1" layoutX="988.0" layoutY="170.0" text="Jelszó megadása kötelező!" textFill="RED" visible="false" />
+                              <Label fx:id="addressErrorLabel1" layoutX="988.0" layoutY="224.0" text="Lakcím megadása kötelező!" textFill="RED" visible="false" />
+                              <Label fx:id="phoneErrorLabel1" layoutX="988.0" layoutY="279.0" text="Telefonszám megadása kötelező!" textFill="RED" visible="false" />
                               <Label layoutX="832.0" layoutY="359.0" text="Email:">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Label>
                               <TextField fx:id="emailTextLabel1" alignment="CENTER" layoutX="984.0" layoutY="360.0" prefHeight="26.0" prefWidth="192.0" promptText="valami@valami.hu" />
-                              <Label fx:id="emailErrorLabel1" layoutX="986.0" layoutY="338.0" text="Email megadása kötelező!" textFill="RED" />
+                              <Label fx:id="emailErrorLabel1" layoutX="986.0" layoutY="338.0" text="Email megadása kötelező!" textFill="RED" visible="false" />
                            </children>
                         </AnchorPane>
                      </content>
@@ -276,18 +276,18 @@
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
                               </Button>
-                              <Label fx:id="nameErrorLabel2" layoutX="988.0" layoutY="55.0" text="Név megadása kötelező!" textFill="RED" />
-                              <Label fx:id="usernameErrorLabel2" layoutX="986.0" layoutY="110.0" text="Felhasználónév megadása kötelező!" textFill="RED" />
-                              <Label fx:id="passwordErrorLabel2" layoutX="988.0" layoutY="170.0" text="Jelszó megadása kötelező!" textFill="RED" />
-                              <Label fx:id="addressErrorLabel2" layoutX="988.0" layoutY="224.0" text="Lakcím megadása kötelező!" textFill="RED" />
-                              <Label fx:id="phoneErrorLabel2" layoutX="988.0" layoutY="279.0" text="Telefonszám megadása kötelező!" textFill="RED" />
+                              <Label fx:id="nameErrorLabel2" layoutX="988.0" layoutY="55.0" text="Név megadása kötelező!" textFill="RED" visible="false" />
+                              <Label fx:id="usernameErrorLabel2" layoutX="986.0" layoutY="110.0" text="Felhasználónév megadása kötelező!" textFill="RED" visible="false" />
+                              <Label fx:id="passwordErrorLabel2" layoutX="988.0" layoutY="170.0" text="Jelszó megadása kötelező!" textFill="RED" visible="false" />
+                              <Label fx:id="addressErrorLabel2" layoutX="988.0" layoutY="224.0" text="Lakcím megadása kötelező!" textFill="RED" visible="false" />
+                              <Label fx:id="phoneErrorLabel2" layoutX="988.0" layoutY="279.0" text="Telefonszám megadása kötelező!" textFill="RED" visible="false" />
                               <Label layoutX="832.0" layoutY="359.0" text="Email:">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Label>
                               <TextField fx:id="emailTextLabel2" alignment="CENTER" layoutX="984.0" layoutY="360.0" prefHeight="26.0" prefWidth="192.0" promptText="valami@valami.hu" />
-                              <Label fx:id="emailErrorLabel2" layoutX="986.0" layoutY="338.0" text="Email megadása kötelező!" textFill="RED" />
+                              <Label fx:id="emailErrorLabel2" layoutX="986.0" layoutY="338.0" text="Email megadása kötelező!" textFill="RED" visible="false" />
                            </children>
                         </AnchorPane>
                      </content>

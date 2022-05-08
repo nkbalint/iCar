@@ -135,9 +135,7 @@ public class RegisterController {
 
 
         if(cont==true){
-            System.out.println("regi");
             User.register(nameLabel.getText(), usernameLabel.getText(), addressLabel.getText(),telefonnumberLabel.getText(),passwordLabel.getText(), emailLabel.getText());
-
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setHeaderText("Sikeresen regisztrált!");
             alert.showAndWait();

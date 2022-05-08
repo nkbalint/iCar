@@ -20,9 +20,9 @@ public class Admin {
     public static final String VALID_PASSWORD_REGEX = "(?=^.{8,}$)(?=(.[^A-Za-z]){2,})^.";
     public static final String VALID_EMAIL_REGEX = "^(.+)@(.+)$";
 
-    public Admin(String userName, Integer id, String name, String adress, String phone, String password, String email) {
+    public Admin(String userName,  String name, String adress, String phone, String password, String email) {
         this.userName = userName;
-        this.id = id;
+       // this.id = id;
         this.name = name;
         this.adress = adress;
         this.phone = phone;
@@ -35,6 +35,13 @@ public class Admin {
 
     public Admin(String userName) {
         this.userName = userName;
+    }
+
+    public static void register(String name, String username,  String adress, String phone, String password, String email) throws Exception {
+        Admin admin = new Admin(username,name,adress,phone,password,email);
+        try (AdminDAO cDAO= new JpaAdminDAO();) {
+            cDAO.saveAdmin(admin);
+        }
     }
 
     public Admin retAdmin() {
