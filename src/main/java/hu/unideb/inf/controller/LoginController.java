@@ -63,6 +63,7 @@ public class LoginController {
                     changeScene(event,"/fxml/AdminDashboard.fxml");
                 }
             }//admin
+
             for (User user : felhasznalok) {
                 if (user.getUsername().equals(usernameLabel.getText()) && user.getPassword().equals(passwordLabel.getText())) {//jo user
                     //   invalidLabel.setVisible(false);

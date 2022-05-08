@@ -25,6 +25,7 @@ public class Car implements Serializable {
     private Integer price;
 
 
+
     public Integer getId() {
         return id;
     }
