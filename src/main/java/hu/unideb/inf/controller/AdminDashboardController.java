@@ -383,7 +383,6 @@ public class AdminDashboardController {
             }
         }
 
-
         if(usernameTextLabel2.getText().isEmpty()){
             usernameErrorLabel2.setVisible(true);
             cont = false;
