@@ -56,10 +56,10 @@
                                     <Font name="System Bold" size="25.0" />
                                  </font>
                               </Label>
-                              <ComboBox layoutX="521.0" layoutY="19.0" prefHeight="26.0" prefWidth="112.0" promptText="Típus szerint:" visibleRowCount="2" />
-                              <ComboBox layoutX="988.0" layoutY="19.0" prefHeight="26.0" prefWidth="186.0" promptText="Üzemanyag típusa szerint:" visibleRowCount="2" />
-                              <ComboBox layoutX="656.0" layoutY="19.0" prefHeight="26.0" prefWidth="112.0" promptText="Szín szerint:" visibleRowCount="2" />
-                              <ComboBox layoutX="785.0" layoutY="19.0" prefHeight="26.0" prefWidth="186.0" promptText="Személyek száma szerint:" visibleRowCount="2" />
+                              <ComboBox fx:id="getType" layoutX="521.0" layoutY="19.0" onAction="#typeList" prefHeight="26.0" prefWidth="112.0" promptText="Típus szerint:" visibleRowCount="2" />
+                              <ComboBox fx:id="getFuel" layoutX="988.0" layoutY="19.0" onAction="#listFuel" prefHeight="26.0" prefWidth="186.0" promptText="Üzemanyag típusa szerint:" visibleRowCount="2" />
+                              <ComboBox fx:id="getColor" layoutX="656.0" layoutY="19.0" onAction="#colorList" prefHeight="26.0" prefWidth="112.0" promptText="Szín szerint:" visibleRowCount="2" />
+                              <ComboBox fx:id="getNumOfPerson" layoutX="785.0" layoutY="19.0" onAction="#listNumPerson" prefHeight="26.0" prefWidth="186.0" promptText="Személyek száma szerint:" visibleRowCount="2" />
                               <Button fx:id="refreshCarButton" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="761.0" layoutY="111.0" mnemonicParsing="false" onAction="#clickedRefreshCarButton" prefHeight="20.0" prefWidth="100.0" text="Frissítés">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
@@ -108,6 +108,15 @@
                               <TextField fx:id="addYearTextField" alignment="CENTER" layoutX="271.0" layoutY="111.0" prefHeight="26.0" prefWidth="112.0" promptText="Évjárat" />
                               <TextField fx:id="addRollingTextField" alignment="CENTER" layoutX="397.0" layoutY="111.0" prefHeight="26.0" prefWidth="112.0" promptText="Hengerűrtartalom" />
                               <TextField fx:id="addPriceTextField" alignment="CENTER" layoutX="521.0" layoutY="76.0" prefHeight="26.0" prefWidth="112.0" promptText="Ár" />
+                              <Label fx:id="carerror" layoutX="656.0" layoutY="81.0" text="Minden mező kitöltése kötelező!" textFill="RED" visible="false" />
+                              <Button fx:id="filter" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="1041.0" layoutY="112.0" mnemonicParsing="false" onAction="#clickedFilterButton" prefHeight="20.0" prefWidth="100.0" text="Szűrés">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
                            </children>
                         </AnchorPane>
                      </content>

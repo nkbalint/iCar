@@ -53,3 +53,4 @@ public class JpaUserDAO implements UserDAO{
         entityManagerFactory.close();
     }
 }
+

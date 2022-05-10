@@ -24,6 +24,27 @@ public class Car implements Serializable {
     private String colour;
     private Integer price;
 
+    public Car(String brand, String type, int year, String fuel, int km, String look, String person, int crowd, Integer rolling, int performance, String gearbox, String colour, int price) {
+        //this.id = id;
+        this.brand = brand;
+        this.type = type;
+        this.year = year;
+        this.fuel = fuel;
+        this.km = km;
+        this.look = look;
+        this.person = person;
+        this.crowd = crowd;
+        this.rolling = rolling;
+        this.performance = performance;
+        this.gearbox = gearbox;
+        this.colour = colour;
+        this.price = price;
+    }
+
+public Car(){
+
+}
+
 
     public Integer getId() {
         return id;
@@ -136,4 +157,14 @@ public class Car implements Serializable {
     public void setPrice(int price) {
         this.price = price;
     }
+
+
+   public static void addcar(String brand, String type, int year, String fuel, int km, String look, String person, int crowd, int rolling, int performance, String gearbox, String colour, int price) throws Exception {
+        Car car = new Car(brand, type, year, fuel, km, look, person, crowd, rolling, performance, gearbox, colour, price);
+        try (CarDAO cDAO = new JpaCarDAO();) {
+            cDAO.saveCar(car);
+        }
+    }
+
+
 }

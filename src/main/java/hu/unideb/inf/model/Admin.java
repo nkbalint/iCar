@@ -75,7 +75,6 @@ public class Admin {
             } else return "Wrong Username OR Password";
         }
     }
-
     public Integer getId() {
         return id;
     }

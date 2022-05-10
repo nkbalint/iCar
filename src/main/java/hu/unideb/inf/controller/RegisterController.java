@@ -133,7 +133,6 @@ public class RegisterController {
             cont = false;
         }
 
-
         if(cont==true){
             User.register(nameLabel.getText(), usernameLabel.getText(), addressLabel.getText(),telefonnumberLabel.getText(),passwordLabel.getText(), emailLabel.getText());
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
