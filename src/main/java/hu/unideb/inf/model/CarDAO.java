@@ -13,4 +13,19 @@ public interface CarDAO extends AutoCloseable {
     public List<Car> getCar(); //R
 
     public List<Car> getCarAll();
+
+    //SELECT * FROM CAR where brand like 'Audi'
+    List<Car> getCarByBrand(String brand);
+
+    List<Car> getCarByLowerPrice(String lower);
+
+    List<Car> getCarByUpperPrice(String upper);
+
+    List<Car> getCarByType(String type);
+
+    List<Car> getCarByColor(String color);
+
+    List<Car> getCarByPerson(String person);
+
+    List<Car> getCarByFuel(String fuel);
 }

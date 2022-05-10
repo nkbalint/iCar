@@ -27,7 +27,7 @@ public class MainApp extends Application {
         stage.show();
     }
 
-    public static void handleData(CarDAO carDAO){
+  /*  public static void handleData(CarDAO carDAO){
         Car car = new Car();
         car.setBrand("AUDI");
         car.setColour("fekete");
@@ -42,6 +42,10 @@ public class MainApp extends Application {
         car.setPrice(43141);
         carDAO.saveCar(car);
     }
+
+   */
+
+
 
     public static void main(String[] args )throws SQLException {
 
