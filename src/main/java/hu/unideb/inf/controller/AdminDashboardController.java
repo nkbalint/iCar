@@ -406,6 +406,7 @@ public class AdminDashboardController {
         carTableView.setItems(FXCollections.observableArrayList(carList));
     }
 
+
     @FXML
     void clickedAddAdminButton(ActionEvent event) throws Exception {
         boolean cont = true;
