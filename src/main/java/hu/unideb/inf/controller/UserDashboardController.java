@@ -162,7 +162,19 @@ public class UserDashboardController {
 
     @FXML
     void clickedLogoutLink(ActionEvent event) {
-
+        Stage stage = (Stage) background.getScene().getWindow();
+        stage.close();
+        Parent login = null;
+        try {
+            login = FXMLLoader.load(getClass().getResource("/fxml/Login.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Scene loginScene = new Scene(login);
+        Stage window = new Stage();
+        window.setScene(loginScene);
+        window.setTitle("Bejelentkezes");
+        window.show();
     }
 
     @FXML
