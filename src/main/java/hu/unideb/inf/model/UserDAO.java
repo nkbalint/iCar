@@ -8,7 +8,7 @@ public interface UserDAO extends AutoCloseable {
 
     public void deleteUser(User a); //D
 
-    public void updateUser(User a); //U
+    public void updateUser(User a, User b); //U
 
     public List<User> getUser(); //R
 

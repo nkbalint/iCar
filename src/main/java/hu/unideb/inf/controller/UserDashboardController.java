@@ -122,6 +122,7 @@ public class UserDashboardController {
     private Button userdataModificationButton;
 
     CarDAO carDAO = new JpaCarDAO();
+    UserDAO userDAO = new JpaUserDAO();
 
     private static User activeUser;
 
@@ -132,6 +133,10 @@ public class UserDashboardController {
 
     public static void getActiveUser(User user) {
         activeUser = user;
+    }
+
+    public static User active() {
+        return activeUser;
     }
 
     public void initialize() {
@@ -275,17 +280,22 @@ public class UserDashboardController {
     @FXML
     void clickedRefreshCarButton(ActionEvent event) {
         init_refreshCar();
+        initialize();
     }
 
     @FXML
     void clickeduserdataModificationButton(ActionEvent event) throws IOException {
+        System.out.println(activeUser);
         Parent dashboard = FXMLLoader.load(getClass().getResource("/fxml/ChangeUserDetailsDashboard.fxml"));
         Scene checkout = new Scene(dashboard);
         Stage window = new Stage();
         window.getIcons().add(new Image(new FileInputStream("src\\main\\resources\\Képek\\iCar_icon.png")));
         window.setScene(checkout);
         window.setTitle("iCar");
+
+        ChangeUserDetailsDashboardController.setActiveUser(activeUser);
         window.show();
+
     }
 
     @FXML
