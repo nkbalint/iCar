@@ -27,23 +27,6 @@ public class MainApp extends Application {
         stage.show();
     }
 
-  /*  public static void handleData(CarDAO carDAO){
-        Car car = new Car();
-        car.setBrand("AUDI");
-        car.setColour("fekete");
-        car.setCrowd(423);
-        car.setGearbox("manualis");
-        car.setKm(2341312);
-        car.setLook("kombi");
-        car.setPerformance(432);
-        car.setPerson("5");
-        car.setRolling(5431);
-        car.setType("sa");
-        car.setPrice(43141);
-        carDAO.saveCar(car);
-    }
-
-   */
 
 
 
