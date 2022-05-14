@@ -29,6 +29,13 @@ public class User implements Serializable  {
         this.email = email;
     }
 
+    public static void modify(User activeUser, String username, String address, String phone, String password, String email) throws Exception {
+        User user = new User(address, username,  username, password, phone,email);
+        try (UserDAO cDAO= new JpaUserDAO();) {
+            cDAO.updateUser(user, activeUser);
+        }
+    }
+
     public int getId() {
         return id;
     }

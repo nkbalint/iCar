@@ -54,11 +54,7 @@ public class LoginController {
             adminok = aDAO.getAdminsAll();
             for (Admin admin :adminok){
                 if(admin.getUserName().equals(usernameLabel.getText())&& admin.getPassword().equals(passwordLabel.getText())){//jo admin
-                    // invalidLabel.setVisible(false);
                     succ=true;
-                    //Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    //alert.setHeaderText("admin");
-                    //alert.showAndWait();
                     activeAdmin = aDAO.getAdminbyID(admin.getId());
                     AdminDashboardController.getActiveAdmin(activeAdmin);
                     changeScene(event,"/fxml/AdminDashboard.fxml");
@@ -67,10 +63,6 @@ public class LoginController {
 
             for (User user : felhasznalok) {
                 if (user.getUsername().equals(usernameLabel.getText()) && user.getPassword().equals(passwordLabel.getText())) {//jo user
-                    //   invalidLabel.setVisible(false);
-                    //   activeCustomer = cDAO.getCustomerbyID(customer.getId());
-                    //   CustomerDashboardController.getActiveCustomer(activeCustomer);
-                    //   changeScene(event,"/fxml/CustomerDashboard.fxml");
                     succ=true;
                     activeUser = cDAO.getUserbyID(user.getId());
                     UserDashboardController.getActiveUser(activeUser);
