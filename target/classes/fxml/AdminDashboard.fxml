@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.controller.AdminDashboardController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.controller.AdminDashboardController">
    <children>
       <AnchorPane fx:id="windowPane" prefHeight="650.0" prefWidth="1000.0" stylesheets="@../style/style.css">
          <children>
@@ -56,10 +56,10 @@
                                     <Font name="System Bold" size="25.0" />
                                  </font>
                               </Label>
-                              <ComboBox fx:id="getType" layoutX="521.0" layoutY="19.0" onAction="#typeList" prefHeight="26.0" prefWidth="112.0" promptText="Típus szerint:" visibleRowCount="2" />
-                              <ComboBox fx:id="getFuel" layoutX="988.0" layoutY="19.0" onAction="#listFuel" prefHeight="26.0" prefWidth="186.0" promptText="Üzemanyag típusa szerint:" visibleRowCount="2" />
-                              <ComboBox fx:id="getColor" layoutX="656.0" layoutY="19.0" onAction="#colorList" prefHeight="26.0" prefWidth="112.0" promptText="Szín szerint:" visibleRowCount="2" />
-                              <ComboBox fx:id="getNumOfPerson" layoutX="785.0" layoutY="19.0" onAction="#listNumPerson" prefHeight="26.0" prefWidth="186.0" promptText="Személyek száma szerint:" visibleRowCount="2" />
+                              <ComboBox fx:id="getType" layoutX="521.0" layoutY="19.0" onAction="#typeList" prefHeight="26.0" prefWidth="112.0" promptText="Típus szerint:" />
+                              <ComboBox fx:id="getFuel" layoutX="988.0" layoutY="19.0" onAction="#listFuel" prefHeight="26.0" prefWidth="186.0" promptText="Üzemanyag típusa szerint:" visibleRowCount="5" />
+                              <ComboBox fx:id="getColor" layoutX="656.0" layoutY="19.0" onAction="#colorList" prefHeight="26.0" prefWidth="112.0" promptText="Szín szerint:" />
+                              <ComboBox fx:id="getNumOfPerson" layoutX="785.0" layoutY="19.0" onAction="#listNumPerson" prefHeight="26.0" prefWidth="186.0" promptText="Személyek száma szerint:" visibleRowCount="5" />
                               <Button fx:id="refreshCarButton" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="761.0" layoutY="111.0" mnemonicParsing="false" onAction="#clickedRefreshCarButton" prefHeight="20.0" prefWidth="100.0" text="Frissítés">
                                  <font>
                                     <Font name="System Bold" size="12.0" />

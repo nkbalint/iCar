@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="792.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.controller.ChangeUserDetailsDashboardController">
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="800.0" stylesheets="@../style/style.css">
+         <children>
+            <ImageView fitHeight="500.0" fitWidth="800.0" layoutX="-7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Képek/ChangeUserDetails_felület_háttere.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="207.0" layoutY="157.0" text="Felhasználói adataim módosítása" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="136.0" layoutY="210.0" text="Jelenlegi adataim" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="501.0" layoutY="210.0" text="Új adataim megadása" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="419.0" layoutY="292.0" text="Email:" textFill="WHITE">
+               <font>
+                  <Font name="Century" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="419.0" layoutY="332.0" text="Lakcím:" textFill="WHITE">
+               <font>
+                  <Font name="Century" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="419.0" layoutY="372.0" text="Telefon:" textFill="WHITE">
+               <font>
+                  <Font name="Century" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="419.0" layoutY="412.0" text="Jelszó:" textFill="WHITE">
+               <font>
+                  <Font name="Century" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="419.0" layoutY="452.0" text="Jelszó újra:" textFill="WHITE">
+               <font>
+                  <Font name="Century" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="419.0" layoutY="252.0" text="Felhasználónév:" textFill="WHITE">
+               <font>
+                  <Font name="Century" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="250.0" text="Név:" textFill="WHITE">
+               <font>
+                  <Font name="Century" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="320.0" text="Email:" textFill="WHITE">
+               <font>
+                  <Font name="Century" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="355.0" text="Lakcím:" textFill="WHITE">
+               <font>
+                  <Font name="Century" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="390.0" text="Telefon:" textFill="WHITE">
+               <font>
+                  <Font name="Century" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="425.0" text="Jelszó:" textFill="WHITE">
+               <font>
+                  <Font name="Century" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="460.0" text="Jelszó újra:" textFill="WHITE">
+               <font>
+                  <Font name="Century" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="285.0" text="Felhasználónév:" textFill="WHITE">
+               <font>
+                  <Font name="Century" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="nameDisplay" layoutX="172.0" layoutY="250.0" text="név" textFill="WHITE">
+               <font>
+                  <Font name="Century" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="emailDisplay" layoutX="172.0" layoutY="320.0" text="email" textFill="WHITE">
+               <font>
+                  <Font name="Century" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="addressDisplay" layoutX="172.0" layoutY="355.0" text="lakcím" textFill="WHITE">
+               <font>
+                  <Font name="Century" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="phoneDisplay" layoutX="172.0" layoutY="390.0" text="telefon" textFill="WHITE">
+               <font>
+                  <Font name="Century" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="passwordDisplay" layoutX="172.0" layoutY="425.0" text="jelszó" textFill="WHITE">
+               <font>
+                  <Font name="Century" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="passwordAgainDisplay" layoutX="172.0" layoutY="460.0" text="jelszó újra" textFill="WHITE">
+               <font>
+                  <Font name="Century" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="usrnameDisplay" layoutX="172.0" layoutY="285.0" text="felhasználónév" textFill="WHITE">
+               <font>
+                  <Font name="Century" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="emailModify" alignment="CENTER" layoutX="554.0" layoutY="290.0" prefHeight="26.0" prefWidth="225.0" promptText="valami@gmail.com" style="-fx-background-radius: 30;">
+               <font>
+                  <Font name="Century" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="addressModify" alignment="CENTER" layoutX="554.0" layoutY="330.0" prefHeight="26.0" prefWidth="225.0" promptText="4028, Debrecen, Kassai út 26" style="-fx-background-radius: 30;">
+               <font>
+                  <Font name="Century" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="telefonnumberModify" alignment="CENTER" layoutX="554.0" layoutY="370.0" prefHeight="26.0" prefWidth="225.0" promptText="06304455667" style="-fx-background-radius: 30;">
+               <font>
+                  <Font name="Century" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="passwordModify" alignment="CENTER" layoutX="554.0" layoutY="410.0" prefHeight="26.0" prefWidth="225.0" promptText="Valami1234" style="-fx-background-radius: 30;">
+               <font>
+                  <Font name="Century" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="passwordAgainModify" alignment="CENTER" layoutX="554.0" layoutY="450.0" prefHeight="26.0" prefWidth="225.0" promptText="Valami1234" style="-fx-background-radius: 30;">
+               <font>
+                  <Font name="Century" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="usernameModify" alignment="CENTER" layoutX="554.0" layoutY="250.0" prefHeight="26.0" prefWidth="225.0" promptText="Péter123" style="-fx-background-radius: 30;">
+               <font>
+                  <Font name="Century" size="12.0" />
+               </font>
+            </TextField>
+            <Button fx:id="modificationButton" alignment="CENTER" layoutX="632.0" layoutY="155.0" mnemonicParsing="false" onAction="#advanceActionButton" prefHeight="35.0" prefWidth="126.0" text="Módosítás" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

@@ -36,6 +36,7 @@ public class LoginController {
     private Button registrationButton;
 
     public Admin activeAdmin;
+    public User activeUser;
 
     @FXML
     void clickedLoginButton(ActionEvent event) throws Exception {
@@ -71,9 +72,9 @@ public class LoginController {
                     //   CustomerDashboardController.getActiveCustomer(activeCustomer);
                     //   changeScene(event,"/fxml/CustomerDashboard.fxml");
                     succ=true;
-                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setHeaderText("user");
-                    alert.showAndWait();
+                    activeUser = cDAO.getUserbyID(user.getId());
+                    UserDashboardController.getActiveUser(activeUser);
+                    changeScene(event,"/fxml/UserDashboard.fxml");
                 }
             }
         }

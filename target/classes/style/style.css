@@ -66,11 +66,11 @@
 }
 
 #carTableView .table-row-cell:hover {
-    -fx-background-color: rgb(0, 168, 159);
+    -fx-background-color: rgb(168, 0, 0);
 }
 
 #carTableView .table-row-cell:selected {
-    -fx-background-color: rgb(0, 255, 242);
+    -fx-background-color: rgb(214, 0, 0);
 }
 
 /*Felhasználó tábla*/
@@ -93,11 +93,11 @@
 }
 
 #userTableView .table-row-cell:hover {
-    -fx-background-color: rgb(0, 168, 159);
+    -fx-background-color: rgb(168, 0, 0);
 }
 
 #userTableView .table-row-cell:selected {
-    -fx-background-color: rgb(0, 255, 242);
+    -fx-background-color: rgb(214, 0, 0);
 }
 
 /*Admin tábla*/
@@ -119,14 +119,15 @@
     -fx-background-color: rgb(21, 18, 106);
 }
 
-#adminTableView .table-row-cell:hover {
-    -fx-background-color: rgb(0, 168, 159);
+#adminTableView  .table-row-cell:hover {
+    -fx-background-color: rgb(168, 0, 0);
 }
 
-#adminTableView .table-row-cell:selected {
-    -fx-background-color: rgb(0, 255, 242);
+#adminTableView  .table-row-cell:selected {
+    -fx-background-color: rgb(214, 0, 0);
 }
 
+#logoutLink2,
 #logoutLink {
     -fx-border-color: transparent;
     -fx-underline: false;
@@ -159,4 +160,59 @@
 #endPriceTextField:focused {
     -fx-effect: dropshadow(gaussian, rgb(164, 61, 255), 1, 1.0, 0.0, 0.0);
     -fx-border-color: rgb(164, 61, 255);
+}
+
+/* LoginDashboard */
+
+#modificationButton,
+#advanceButton{
+    -fx-background-color: linear-gradient(to left, rgb(27,20,100), rgb(255,0,255));
+    -fx-background-radius: 20px;
+}
+
+#filterAdminTableButton,
+#refreshCarButton,
+#userdataModificationButton {
+    -fx-background-radius: 20px;
+}
+
+#filterAdminTableButton:hover,
+#refreshCarButton:hover,
+#userdataModificationButton:hover {
+    -fx-background-color: linear-gradient(to left, rgb(27,20,100), rgb(255,0,255));
+    -fx-text-fill: white;
+}
+
+#logoutLink2:hover {
+    -fx-text-fill: rgb(255,0,255);
+}
+
+#carTableViewUT {
+    -fx-background-color: transparent;
+}
+
+#carTableViewUT .table-cell {
+    -fx-text-fill: white;
+    -fx-border-color: rgb(120, 120, 120);
+    -fx-background-color: rgba(71,71,71,0.1);
+}
+
+#carTableViewUT .table-row-cell {
+    -fx-background-color: rgba(71,71,71, 0.4);
+}
+
+#carTableViewUT .column-header{
+    -fx-background-color: linear-gradient(to bottom, rgb(255,0,255), rgb(148, 0, 148));
+}
+
+#carTableViewUT .table-row-cell:odd {
+    -fx-background-color: rgba(108, 108, 108, 0.4);
+}
+
+#carTableViewUT .table-row-cell:hover {
+    -fx-background-color: rgb(255,0,255);
+}
+
+#carTableViewUT .table-row-cell:selected {
+    -fx-background-color: rgb(148, 0, 148);
 }

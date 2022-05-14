@@ -13,4 +13,6 @@ public interface UserDAO extends AutoCloseable {
     public List<User> getUser(); //R
 
     public  List<User> getUserAll();
+
+    public User getUserbyID(int id);
 }

@@ -42,6 +42,13 @@ public class JpaUserDAO implements UserDAO{
     }
 
     @Override
+    public User getUserbyID(int id) {
+        String sqlstr="SELECT user FROM User user WHERE ID="+"'"+id+"'";
+        TypedQuery<User> query=entityManager.createQuery(sqlstr,User.class);
+        return query.getSingleResult();
+    }
+
+    @Override
     public List<User> getUserAll() {
         String sqlstr = "SELECT user FROM User user";
         TypedQuery<User> query = entityManager.createQuery(sqlstr, User.class);
