@@ -171,7 +171,9 @@
 }
 
 #filterAdminTableButton,
+#filterButton,
 #refreshCarButton,
+#refreshCarButton2,
 #userdataModificationButton {
     -fx-background-radius: 20px;
 }

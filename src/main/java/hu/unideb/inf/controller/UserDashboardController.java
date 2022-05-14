@@ -101,7 +101,7 @@ public class UserDashboardController {
     private Label headerUsernameLabel;
 
     @FXML
-    private Hyperlink logoutLink;
+    private Hyperlink logoutLink2;
 
     @FXML
     private Button refreshCarButton;
@@ -111,9 +111,6 @@ public class UserDashboardController {
 
     @FXML
     private TextField startPriceTextField;
-
-    @FXML
-    private Hyperlink logoutLink2;
 
     @FXML
     private Button userdataModificationButton;

@@ -227,10 +227,10 @@ public class AdminDashboardController {
     private Button refreshAdminButton;
 
     @FXML
-    private Button filter;
+    private Button filterButton;
 
     @FXML
-    private Button refreshCarButton;
+    private Button refreshCarButton2;
 
     @FXML
     private Button refreshUserButton;
