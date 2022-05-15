@@ -1,5 +1,4 @@
 package hu.unideb.inf.controller;
-
 import hu.unideb.inf.model.Car;
 import hu.unideb.inf.model.CarDAO;
 import hu.unideb.inf.model.JpaCarDAO;
