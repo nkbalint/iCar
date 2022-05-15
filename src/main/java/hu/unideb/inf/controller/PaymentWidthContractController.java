@@ -17,6 +17,7 @@ import java.util.Date;
 
 public class PaymentWidthContractController {
 
+
     @FXML
     private Label addressLabel;
 
