@@ -52,6 +52,10 @@
     -fx-background-color: rgb(157, 157, 157);
 }
 
+#carTableView .column-header-background .filler {
+    -fx-background-color: rgb(157, 157, 157);
+}
+
 #carTableView .table-cell {
     -fx-border-color: white;
     -fx-text-fill: white;
@@ -79,6 +83,10 @@
     -fx-background-color: rgb(157, 157, 157);
 }
 
+#userTableView .column-header-background .filler {
+    -fx-background-color: rgb(157, 157, 157);
+}
+
 #userTableView .table-cell {
     -fx-border-color: white;
     -fx-text-fill: white;
@@ -103,6 +111,10 @@
 /*Admin tábla*/
 
 #adminTableView .column-header{
+    -fx-background-color: rgb(157, 157, 157);
+}
+
+#adminTableView .column-header-background .filler {
     -fx-background-color: rgb(157, 157, 157);
 }
 
@@ -218,4 +230,138 @@
 
 #carTableViewUT .table-row-cell:selected {
     -fx-background-color: rgb(148, 0, 148);
+}
+
+#carTableViewUT .scroll-bar:vertical,
+#carTableViewUT .scroll-bar:vertical .track,
+#carTableViewUT .scroll-bar:vertical .track-background {
+    -fx-background-color: rgb(71, 71, 71);
+}
+
+#carTableViewUT .scroll-bar:vertical .thumb {
+    -fx-background-color: linear-gradient(to bottom, rgb(255,0,255), rgb(148, 0, 148));
+}
+
+#carTableViewUT .scroll-bar:horizontal,
+#carTableViewUT .scroll-bar:horizontal .track,
+#carTableViewUT .scroll-bar:horizontal .track-background {
+    -fx-background-color: rgb(71, 71, 71);
+}
+
+#carTableViewUT .scroll-bar:horizontal .thumb {
+    -fx-background-color: linear-gradient(to bottom, rgb(255,0,255), rgb(148, 0, 148));
+}
+
+#carTableViewUT  .scroll-bar:vertical .increment-button,
+#carTableViewUT .scroll-bar:vertical .decrement-button {
+    -fx-background-color: rgb(71, 71, 71);
+}
+
+#carTableViewUT  .scroll-bar:vertical .increment-button:hover,
+#carTableViewUT .scroll-bar:vertical .decrement-button:hover {
+    -fx-background-color: rgb(148, 0, 148);
+}
+
+#carTableViewUT  .scroll-bar:vertical .increment-button .increment-arrow,
+#carTableViewUT .scroll-bar:vertical .decrement-button .decrement-arrow{
+    -fx-background-color: rgb(255, 255, 255);
+}
+
+#carTableViewUT .column-header-background .filler {
+    -fx-background-color: linear-gradient(to bottom, rgb(255,0,255), rgb(148, 0, 148));
+}
+
+#typeCombobox,
+#colorCombobox,
+#personCombobox,
+#fuelCombobox {
+    -fx-background-color: linear-gradient(to bottom, rgb(255,0,255), rgb(148, 0, 148));
+    -fx-font-weight: bold;
+}
+
+#typeCombobox .list-view .list-cell,
+#colorCombobox .list-view .list-cell,
+#personCombobox .list-view .list-cell,
+#fuelCombobox .list-view .list-cell {
+    -fx-background-color:rgb(71, 71, 71);
+    -fx-border-color: rgb(71, 71, 71);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+#typeCombobox .list-view .list-cell:hover,
+#colorCombobox .list-view .list-cell:hover,
+#personCombobox .list-view .list-cell:hover,
+#fuelCombobox .list-view .list-cell:hover {
+    -fx-background-color:rgb(148, 0, 148);
+    -fx-text-fill: rgb(0, 0, 0);
+}
+
+#typeCombobox .list-view,
+#colorCombobox .list-view,
+#personCombobox .list-view,
+#fuelCombobox .list-view {
+    -fx-border-color: rgb(71, 71, 71);
+}
+
+#typeCombobox .arrow,
+#colorCombobox .arrow,
+#personCombobox .arrow,
+#fuelCombobox .arrow{
+    -fx-background-color:black;
+}
+
+#typeCombobox .scroll-bar:vertical,
+#typeCombobox .scroll-bar:vertical .track,
+#typeCombobox .scroll-bar:vertical .track-background,
+#colorCombobox .scroll-bar:vertical,
+#colorCombobox .scroll-bar:vertical .track,
+#colorCombobox .scroll-bar:vertical .track-background,
+#personCombobox .scroll-bar:vertical,
+#personCombobox .scroll-bar:vertical .track,
+#personCombobox .scroll-bar:vertical .track-background,
+#fuelCombobox .scroll-bar:vertical,
+#fuelCombobox .scroll-bar:vertical .track,
+#fuelCombobox .scroll-bar:vertical .track-background {
+    -fx-background-color: rgb(71, 71, 71);
+}
+
+#typeCombobox .scroll-bar:vertical .thumb,
+#colorCombobox .scroll-bar:vertical .thumb,
+#personCombobox .scroll-bar:vertical .thumb,
+#fuelCombobox .scroll-bar:vertical .thumb {
+    -fx-background-color: linear-gradient(to bottom, rgb(255,0,255), rgb(148, 0, 148));
+}
+
+#typeCombobox .scroll-bar:vertical .increment-button,
+#typeCombobox .scroll-bar:vertical .decrement-button,
+#colorCombobox .scroll-bar:vertical .increment-button,
+#colorCombobox .scroll-bar:vertical .decrement-button,
+#personCombobox .scroll-bar:vertical .increment-button,
+#personCombobox .scroll-bar:vertical .decrement-button,
+#fuelCombobox .scroll-bar:vertical .increment-button,
+#fuelCombobox .scroll-bar:vertical .decrement-button {
+    -fx-background-color: rgb(71, 71, 71);
+}
+
+#typeCombobox .scroll-bar:vertical .increment-button:hover,
+#typeCombobox .scroll-bar:vertical .decrement-button:hover,
+#colorCombobox .scroll-bar:vertical .increment-button:hover,
+#colorCombobox .scroll-bar:vertical .decrement-button:hover,
+#personCombobox .scroll-bar:vertical .increment-button:hover,
+#personCombobox .scroll-bar:vertical .decrement-button:hover,
+#fuelCombobox .scroll-bar:vertical .increment-button:hover,
+#fuelCombobox .scroll-bar:vertical .decrement-button:hover {
+    -fx-background-color: rgb(148, 0, 148);
+}
+
+#typeCombobox .scroll-bar:vertical .increment-button .increment-arrow,
+#typeCombobox .scroll-bar:vertical .decrement-button .decrement-arrow,
+#colorCombobox .scroll-bar:vertical .increment-button .increment-arrow,
+#colorCombobox .scroll-bar:vertical .decrement-button .decrement-arrow,
+#personCombobox .scroll-bar:vertical .increment-button .increment-arrow,
+#personCombobox .scroll-bar:vertical .decrement-button .decrement-arrow,
+#fuelCombobox .scroll-bar:vertical .increment-button .increment-arrow,
+#fuelCombobox .scroll-bar:vertical .decrement-button .decrement-arrow{
+    -fx-background-color: rgb(255, 255, 255);
 }

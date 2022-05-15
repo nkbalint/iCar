@@ -48,7 +48,7 @@
                                     <TableColumn fx:id="carGearboxCol" prefWidth="90.0" text="Sebességváltó" />
                                     <TableColumn fx:id="carYearCol" prefWidth="60.0" text="Évjárat" />
                                     <TableColumn fx:id="carRollingCol" prefWidth="110.0" text="Hengerűrtartalom" />
-                                    <TableColumn fx:id="carPriceCol" prefWidth="87.0" text="Ár" />
+                                    <TableColumn fx:id="carPriceCol" prefWidth="86.0" text="Ár" />
                                  </columns>
                               </TableView>
                               <Label layoutX="14.0" layoutY="14.0" text="Szűrés:">
@@ -56,10 +56,10 @@
                                     <Font name="System Bold" size="25.0" />
                                  </font>
                               </Label>
-                              <ComboBox fx:id="getType" layoutX="521.0" layoutY="19.0" onAction="#typeList" prefHeight="26.0" prefWidth="112.0" promptText="Típus szerint:" visibleRowCount="2" />
-                              <ComboBox fx:id="getFuel" layoutX="988.0" layoutY="19.0" onAction="#listFuel" prefHeight="26.0" prefWidth="186.0" promptText="Üzemanyag típusa szerint:" visibleRowCount="2" />
-                              <ComboBox fx:id="getColor" layoutX="656.0" layoutY="19.0" onAction="#colorList" prefHeight="26.0" prefWidth="112.0" promptText="Szín szerint:" visibleRowCount="2" />
-                              <ComboBox fx:id="getNumOfPerson" layoutX="785.0" layoutY="19.0" onAction="#listNumPerson" prefHeight="26.0" prefWidth="186.0" promptText="Személyek száma szerint:" visibleRowCount="2" />
+                              <ComboBox fx:id="getType" layoutX="521.0" layoutY="19.0" onAction="#typeList" prefHeight="26.0" prefWidth="112.0" promptText="Típus szerint:" />
+                              <ComboBox fx:id="getFuel" layoutX="988.0" layoutY="19.0" onAction="#listFuel" prefHeight="26.0" prefWidth="186.0" promptText="Üzemanyag típusa szerint:" visibleRowCount="6" />
+                              <ComboBox fx:id="getColor" layoutX="656.0" layoutY="19.0" onAction="#colorList" prefHeight="26.0" prefWidth="112.0" promptText="Szín szerint:" />
+                              <ComboBox fx:id="getNumOfPerson" layoutX="785.0" layoutY="19.0" onAction="#listNumPerson" prefHeight="26.0" prefWidth="186.0" promptText="Személyek száma szerint:" visibleRowCount="6" />
                               <Button fx:id="refreshCarButton2" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="607.0" layoutY="147.0" mnemonicParsing="false" onAction="#clickedRefreshCarButton" prefHeight="20.0" prefWidth="112.0" text="Frissítés">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
