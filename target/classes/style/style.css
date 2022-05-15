@@ -164,6 +164,7 @@
 
 /* LoginDashboard */
 
+#buyingButton,
 #modificationButton,
 #advanceButton{
     -fx-background-color: linear-gradient(to left, rgb(27,20,100), rgb(255,0,255));
