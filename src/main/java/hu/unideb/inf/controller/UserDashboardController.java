@@ -192,8 +192,14 @@ public class UserDashboardController {
     }
 
     @FXML
-    void advanceActionButton(ActionEvent event) {
-        //ugras eloleg ablakra
+    void advanceActionButton(ActionEvent event) throws IOException {
+        Parent dashboard = FXMLLoader.load(getClass().getResource("/fxml/PaymentWidthContract.fxml"));
+        Scene checkout = new Scene(dashboard);
+        Stage window = new Stage();
+        window.getIcons().add(new Image(new FileInputStream("src\\main\\resources\\Képek\\iCar_icon.png")));
+        window.setScene(checkout);
+        window.setTitle("iCar");
+        window.show();
     }
 
     @FXML
@@ -285,7 +291,7 @@ public class UserDashboardController {
 
     @FXML
     void clickeduserdataModificationButton(ActionEvent event) throws IOException {
-        System.out.println(activeUser);
+        //System.out.println(activeUser);
         Parent dashboard = FXMLLoader.load(getClass().getResource("/fxml/ChangeUserDetailsDashboard.fxml"));
         Scene checkout = new Scene(dashboard);
         Stage window = new Stage();

@@ -6,6 +6,7 @@ hu\unideb\inf\model\UserDAO.class
 hu\unideb\inf\model\JpaAdminDAO.class
 hu\unideb\inf\model\JpaCarDAO.class
 hu\unideb\inf\model\Admin.class
+hu\unideb\inf\controller\PaymentWidthContractController.class
 hu\unideb\inf\controller\ChangeUserDetailsDashboardController.class
 hu\unideb\inf\MainApp.class
 hu\unideb\inf\model\CarDAO.class

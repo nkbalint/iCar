@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.controller.PaymentWidthContractController">
+   <children>
+      <AnchorPane prefHeight="700.0" prefWidth="600.0">
+         <children>
+            <ImageView fitHeight="700.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Képek/szerződés.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="63.0" layoutY="218.0" text="Márka:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="268.0" text="Szín:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="343.0" text="Kilóméter:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="243.0" text="Típus:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="305.0" layoutY="293.0" text="Sebességváltó:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="305.0" layoutY="268.0" text="Tömeg:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="305.0" layoutY="243.0" text="Kialakítás:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="293.0" text="Üzemanyag:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="318.0" text="Személy:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="305.0" layoutY="343.0" text="Hengerűrtartalom:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="305.0" layoutY="318.0" text="Évjárat:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="305.0" layoutY="218.0" text="Teljesítmény:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="300.0" layoutY="341.0" />
+            <Label layoutX="63.0" layoutY="175.0" text="1. Autó adatai:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="brandLabel" layoutX="160.0" layoutY="218.0" text="márka">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="colorLabel" layoutX="160.0" layoutY="268.0" text="szín">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="kmLabel" layoutX="160.0" layoutY="343.0" text="kilóméter">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="typeLabel" layoutX="160.0" layoutY="243.0" text="típus">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="fuelLabel" layoutX="160.0" layoutY="293.0" text="üzemanyag">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="personLabel" layoutX="160.0" layoutY="318.0" text="személy">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="gearboxLabel" layoutX="433.0" layoutY="293.0" text="sebességváltó">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="crowdLabel" layoutX="433.0" layoutY="268.0" text="tömeg">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lookLabel" layoutX="433.0" layoutY="243.0" text="kialakítás">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="rollingLabel" layoutX="433.0" layoutY="343.0" text="hengerűrtartalom">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="yearLabel" layoutX="433.0" layoutY="318.0" text="évjárat">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="performanceLabel" layoutX="433.0" layoutY="218.0" text="teljesítmény">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="446.0" text="Teljes név:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="496.0" text="Email-cím:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="471.0" text="Állampolgársága:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="305.0" layoutY="471.0" text="Születési Dátum:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="521.0" text="Lakcím:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="305.0" layoutY="446.0" text="Felhasználónév:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="403.0" text="2. Vásárló adatai:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="nameLabel" layoutX="190.0" layoutY="446.0" text="teljes név">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="emailLabel" layoutX="190.0" layoutY="496.0" text="email">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="190.0" layoutY="471.0" text="Magyar">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="addressLabel" layoutX="190.0" layoutY="521.0" text="lakcim">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="433.0" layoutY="471.0" text="YYYY.MM.DD">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="usernameLabel" layoutX="433.0" layoutY="446.0" text="felhasználónév">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="627.0" layoutY="382.0" text="A jármű teljes vételára:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="priceLabel" layoutX="965.0" layoutY="382.0" text="ár" textFill="RED">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="627.0" layoutY="326.0" text="A járműnek a vevő birtokába kerülési időpontja:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="965.0" layoutY="326.0" text="YYYY.MM.DD">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="627.0" layoutY="354.0" text="A tulajdonjogváltozás hatályba lépésének napja:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="965.0" layoutY="354.0" text="YYYY.MM.DD">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Text layoutX="627.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Eladó és vevő kijelenti, hogy a szerződésben foglaltakat megértette és elfogadja">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Text>
+            <Label layoutX="627.0" layoutY="471.0" text="Dátum:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="699.0" layoutY="471.0" text="YYYY.MM.DD">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="627.0" layoutY="513.0" text="Aláírás:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="126.0" fitWidth="134.0" layoutX="741.0" layoutY="508.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Képek/iCar_pecsét.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="701.0" layoutY="555.0" text="Eladó">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="990.0" layoutY="555.0" text="Vevő">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="1006.0" layoutY="608.0" startX="-100.0" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="639.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Képek/aláírás.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="627.0" layoutY="410.0" text="A jármű 10%-os előlege:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="advancePriceLabel" layoutX="966.0" layoutY="410.0" text="ár" textFill="RED">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" layoutX="27.0" layoutY="680.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Eladó és vevő kijelenti, hogy a szerződésben foglaltakat megértette és elfogadja">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Text>
+            <CheckBox layoutX="530.0" layoutY="666.0" mnemonicParsing="false" />
+            <Button fx:id="buyingButton" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="839.0" layoutY="659.0" mnemonicParsing="false" onAction="#clickedBuyingButton" prefHeight="20.0" prefWidth="112.0" text="Vásárlás" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
