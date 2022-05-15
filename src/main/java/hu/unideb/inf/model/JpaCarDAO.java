@@ -27,6 +27,13 @@ public class JpaCarDAO implements CarDAO{
     }
 
     @Override
+    public void buyCar(Car a) {
+        entityManager.getTransaction().begin();
+        entityManager.remove(entityManager.contains(a) ? a : entityManager.merge(a));
+        entityManager.getTransaction().commit();
+    }
+
+    @Override
     public void updateCar(Car a) {
     saveCar(a);
     }

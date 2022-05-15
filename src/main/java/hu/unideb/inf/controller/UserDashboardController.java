@@ -125,6 +125,7 @@ public class UserDashboardController {
     UserDAO userDAO = new JpaUserDAO();
 
     private static User activeUser;
+    private static Car selected;
 
     String type=null;
     String color=null;
@@ -191,15 +192,27 @@ public class UserDashboardController {
         getFuel.setItems(observableArrayList(uzemanyag));
     }
 
+    public static Car getSelectedCar(){
+        return selected;
+    }
+
     @FXML
     void advanceActionButton(ActionEvent event) throws IOException {
-        Parent dashboard = FXMLLoader.load(getClass().getResource("/fxml/PaymentWidthContract.fxml"));
-        Scene checkout = new Scene(dashboard);
-        Stage window = new Stage();
-        window.getIcons().add(new Image(new FileInputStream("src\\main\\resources\\Képek\\iCar_icon.png")));
-        window.setScene(checkout);
-        window.setTitle("iCar");
-        window.show();
+
+        selected = carTableViewUT.getSelectionModel().getSelectedItem();
+        if (selected != null) {
+            Parent dashboard = FXMLLoader.load(getClass().getResource("/fxml/PaymentWidthContract.fxml"));
+            Scene checkout = new Scene(dashboard);
+            Stage window = new Stage();
+            window.getIcons().add(new Image(new FileInputStream("src\\main\\resources\\Képek\\iCar_icon.png")));
+            window.setScene(checkout);
+            window.setTitle("iCar");
+            window.show();
+        } else {
+            Alert alert = new Alert(Alert.AlertType.ERROR,
+                    "Nincs autó kiválasztva!");
+            alert.showAndWait();
+        }
     }
 
     @FXML

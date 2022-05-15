@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.controller.PaymentWidthContractController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.controller.PaymentWidthContractController">
    <children>
       <AnchorPane prefHeight="700.0" prefWidth="600.0">
          <children>
@@ -227,7 +227,7 @@
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="965.0" layoutY="326.0" text="YYYY.MM.DD">
+            <Label fx:id="dateSale" layoutX="965.0" layoutY="326.0" text="YYYY.MM.DD">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
@@ -237,7 +237,7 @@
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="965.0" layoutY="354.0" text="YYYY.MM.DD">
+            <Label fx:id="dateChange" layoutX="965.0" layoutY="354.0" text="YYYY.MM.DD">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
@@ -252,7 +252,7 @@
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="699.0" layoutY="471.0" text="YYYY.MM.DD">
+            <Label fx:id="dateNow" layoutX="699.0" layoutY="471.0" text="YYYY.MM.DD">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
@@ -298,7 +298,7 @@
                   <Font name="Arial Bold" size="13.0" />
                </font>
             </Text>
-            <CheckBox layoutX="530.0" layoutY="666.0" mnemonicParsing="false" />
+            <CheckBox fx:id="eula" layoutX="530.0" layoutY="666.0" mnemonicParsing="false" />
             <Button fx:id="buyingButton" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="839.0" layoutY="659.0" mnemonicParsing="false" onAction="#clickedBuyingButton" prefHeight="20.0" prefWidth="112.0" text="Vásárlás" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />

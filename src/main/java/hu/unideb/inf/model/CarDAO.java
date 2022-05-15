@@ -8,6 +8,8 @@ public interface CarDAO extends AutoCloseable {
 
     public void deleteCar(Car a); //D
 
+    void buyCar(Car a);
+
     public void updateCar(Car a); //U
 
     public List<Car> getCar(); //R

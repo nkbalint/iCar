@@ -13,6 +13,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ChangeUserDetailsDashboardController {
 
     @FXML
@@ -90,6 +93,18 @@ public void initialize(){
         if(usernameModify.getText().equals("")){
             username=usrnameDisplay.getText();
         } else {
+            List<User> felhasznalok = new ArrayList<>();
+            try (UserDAO cDAO = new JpaUserDAO()) {
+                felhasznalok = cDAO.getUserAll();
+                for (User user : felhasznalok) {
+                    if (user.getUsername().equals(usernameModify.getText())) {
+                        Alert alert = new Alert(Alert.AlertType.ERROR,
+                                "Ez a felhasználónév foglalt!");
+                        alert.showAndWait();
+                        cont = false;
+                    }
+                }
+            }
             username=usernameModify.getText();
         }
         if(addressModify.getText().equals("")){

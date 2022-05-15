@@ -11,6 +11,7 @@
         <module name="JavaFX11" />
         <module name="git" />
         <module name="icar_legf" />
+        <module name="sfmfinal" />
       </profile>
     </annotationProcessing>
   </component>
