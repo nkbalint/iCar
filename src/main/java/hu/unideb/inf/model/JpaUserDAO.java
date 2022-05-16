@@ -18,6 +18,7 @@ public class JpaUserDAO implements UserDAO{
         entityManager.getTransaction().commit();
     }
 
+
     @Override
     public void deleteUser(User a) {
         entityManager.getTransaction().begin();
