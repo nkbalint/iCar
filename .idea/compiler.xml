@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mostani2" />
         <module name="projekt" />
         <module name="JavaFX11" />
         <module name="git" />
         <module name="icar_legf" />
+        <module name="icartestma" />
+        <module name="mostani2" />
         <module name="sfmfinal" />
       </profile>
     </annotationProcessing>
